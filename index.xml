@@ -17,10 +17,10 @@
         </item>
         <item>
         <title>搭建个人博客</title>
-        <link>https://loopyasa.github.io/post/hugo&#43;vercel%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://loopyasa.github.io/post/one/</link>
         <pubDate>Sun, 05 Dec 2021 20:44:06 +0800</pubDate>
         
-        <guid>https://loopyasa.github.io/post/hugo&#43;vercel%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>https://loopyasa.github.io/post/one/</guid>
         <description>&lt;h1 id=&#34;hugovercel搭建个人博客&#34;&gt;Hugo+Vercel搭建个人博客&lt;/h1&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;个人在搭建了博客后放在了github上，因为比较慢&lt;del&gt;懒&lt;/del&gt;，很长一段时间都闲置了，最近了解了Vercel并且部署了一个node后端小项目后决定将博客部署在Vercel上。&lt;/p&gt;
