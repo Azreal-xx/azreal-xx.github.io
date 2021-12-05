@@ -13,7 +13,8 @@
       <pubDate>Sun, 05 Dec 2021 14:58:46 +0800</pubDate>
       
       <guid>https://loopyasa.github.io/post/hugo&#43;vercel%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
-      <description>Hugo+Vercel搭建个人博客 前言: 个人在搭建了博客后放在了github上，因为比较慢懒，很长一段时间都闲置了，最近了解了Vercel并且部署了一个node后端小项目后决定将博客部署在Vercel上。 准备工作   Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频地址。
+      <description>Hugo+Vercel搭建个人博客 前言 个人在搭建了博客后放在了github上，因为比较慢懒，很长一段时间都闲置了，最近了解了Vercel并且部署了一个node后端小项目后决定将博客部署在Vercel上。
+准备工作   Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频地址。
  https://www.bilibili.com/video/BV1q4411i7gL
    Vercel这边注册个账号就可以了，个人界面如下:
 
