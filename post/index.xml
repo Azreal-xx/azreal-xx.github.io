@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://loopyasa.github.io/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Dec 2021 14:58:46 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo&#43;Vercel搭建个人博客</title>
+      <link>https://loopyasa.github.io/post/hugo&#43;vercel%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 05 Dec 2021 14:58:46 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/post/hugo&#43;vercel%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>Hugo+Vercel搭建个人博客 前言: 个人在搭建了博客后放在了github上，因为比较慢懒，很长一段时间都闲置了，最近了解了Vercel并且部署了一个node后端小项目后决定将博客部署在Vercel上。 准备工作   Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频地址。
+ https://www.bilibili.com/video/BV1q4411i7gL
+   Vercel这边注册个账号就可以了，个人界面如下:
+
+  开始搭建 点击界面上的New Porject
+image-20211204174713418
+之后import自己仓库里的博客项目
+image-20211204174758553
+再在这个界面输入自己的项目名字后点击create
+
+在这一步会有个小坑，因为是用的Hugo框架所以我在这一步一开始选了Hugo然后部署出了错，后面选着默认的部署成功了，所以在这我选择默认的，大家就不知道会不会遇到啦。
+成功啦!
+
+访问试试看，Perfect!
+总结 Hugo+Vercel还是很好用的白嫖,访问速度相比github上也快了不少。在Hugo上还有一些自己的小坑正常人都觉得不是问题，太菜鸡了QAQ后面也会更新出来。</description>
+    </item>
+    
+  </channel>
+</rss>
