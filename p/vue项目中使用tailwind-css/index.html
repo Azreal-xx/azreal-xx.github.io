@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-	<meta name="generator" content="Hugo 0.89.4" /><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='羔羊所到之处  必有恶狼随行'><title>MaGent Blog</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Vue&#43;Tailwind CSS'><title>Vue项目中使用Tailwind CSS</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='MaGent Blog'>
-<meta property='og:description' content='羔羊所到之处  必有恶狼随行'>
-<meta property='og:url' content='https://loopyasa.github.io/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue项目中使用Tailwind CSS'>
+<meta property='og:description' content='Vue&#43;Tailwind CSS'>
+<meta property='og:url' content='https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2021-12-06T23:06:19&#43;08:00 '/>
-<meta name="twitter:title" content="MaGent Blog">
-<meta name="twitter:description" content="羔羊所到之处  必有恶狼随行"><link rel="alternate" type="application/rss&#43;xml" href="https://loopyasa.github.io/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:tag' content='Tailwind CSS' /><meta property='article:published_time' content='2021-12-06T23:06:19&#43;08:00'/><meta property='article:modified_time' content='2021-12-06T23:06:19&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/two/3.png' />
+<meta name="twitter:title" content="Vue项目中使用Tailwind CSS">
+<meta name="twitter:description" content="Vue&#43;Tailwind CSS"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/two/3.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
-    <body class="">
+    <body class="
+    article-page 
+">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -39,7 +41,13 @@
         }
     })();
 </script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+<div class="container main-container flex 
+    
+        on-phone--column extended
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
     <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -158,16 +166,10 @@
         
     </ol>
 </aside>
-<main class="main full-width">
-    
-    
-    
-    
 
-    <section class="article-list">
-        
-            
-<article class="has-image">
+    
+<main class="main full-width">
+    <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
             <a href="/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/">
@@ -235,81 +237,158 @@
     
 </div>
 </header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-                
-                    <img src="/post/one/6.png" loading="lazy" alt="Featured image of post 搭建个人博客" />
-                
-            </a>
-        </div>
+
+    <section class="article-content">
+    <h1 id="vue项目中使用tailwind-css">Vue项目中使用Tailwind CSS</h1>
+<ul>
+<li>
+<p>使用npm安装Tailwind、PostCSS、Autoprefixer</p>
+<blockquote>
+<p>npm install -D tailwindcss postcss autoprefixer</p>
+</blockquote>
+</li>
+<li>
+<p>初始化Tailwind和PostCSS的设定文件</p>
+<blockquote>
+<p>npx tailwind init -p</p>
+</blockquote>
+</li>
+<li>
+<p>配置tailwind.config.js中的purge的值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">purge</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s1">&#39;./index.html&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;./src/**/*.{vue, js, ts, jsx ,tsx}&#39;</span>
+  <span class="p">],</span>
+  <span class="nx">darkMode</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// or &#39;media&#39; or &#39;class&#39;
+</span><span class="c1"></span>  <span class="nx">theme</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+  <span class="nx">variants</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+  <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>在src目录下创建index.css，并使用@tailwind关键词载入三大部件</p>
+<p><figure 
+	>
+	<a href="/post/two/1.png" >
+		<img src="/post/two/1.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+</li>
+<li>
+<p>在main.js载入index.css</p>
+</li>
+</ul>
+<p>​       <figure 
+	>
+	<a href="/post/two/2.png" >
+		<img src="/post/two/2.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li>
+<p>使用tailwindcss并测试，最后附上tailwindcss文档，方便查找需要样式</p>
+<p><a class="link" href="https://www.tailwindcss.cn/docs"  target="_blank" rel="noopener"
+    >https://www.tailwindcss.cn/docs</a></p>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
     
-
-    <div class="article-details">
-    
-    <header class="article-category">
+    <section class="article-tags">
         
-            <a href="/categories/%E5%8D%9A%E5%AE%A2/" >
-                博客
-            </a>
+            <a href="/tags/vue/">Vue</a>
         
-    </header>
-    
-
-    <h2 class="article-title">
-        <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
-    </h2>
-
-    
-    <h3 class="article-subtitle">
-        Hugo&#43;Vercel
-    </h3>
-    
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Dec 05, 2021</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 1 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-</div>
-</header>
-</article>
+            <a href="/tags/tailwind-css/">Tailwind CSS</a>
         
     </section>
-<footer class="site-footer">
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/one/6.png" loading="lazy" data-key="" data-hash="/post/one/6.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">搭建个人博客</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        <head>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+<body>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'y8mziDx1WK7ScGpENqrffBEO-gzGzoHsz',
+            appKey: 'HSM2AhRxPLvuebclx4491dsb'
+        })
+    </script>
+</body>
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -324,51 +403,87 @@
     </section>
 </footer>
 
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
             </main>
     
-    
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-        
-            
-        
-            <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
-  <circle cx="9" cy="9" r="2" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title">标签云</h2>
-
-    <div class="tagCloud-tags">
-        
-            <a href="/tags/hugo/" class="font_size_1">
-                Hugo
-            </a>
-        
-            <a href="/tags/tailwind-css/" class="font_size_1">
-                Tailwind CSS
-            </a>
-        
-            <a href="/tags/vercel/" class="font_size_1">
-                Vercel
-            </a>
-        
-            <a href="/tags/vue/" class="font_size_1">
-                Vue
-            </a>
-        
-    </div>
-</section>
-        
-    </aside>
-
 
         </div>
         <script 
