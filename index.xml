@@ -6,16 +6,7 @@
         <description>Recent content on MaGent Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 05 Dec 2021 20:49:58 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://loopyasa.github.io/post/test/</link>
-        <pubDate>Sun, 05 Dec 2021 20:49:58 +0800</pubDate>
-        
-        <guid>https://loopyasa.github.io/post/test/</guid>
-        <description>&lt;h2 id=&#34;测试&#34;&gt;测试&lt;/h2&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Sun, 05 Dec 2021 20:44:06 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>搭建个人博客</title>
         <link>https://loopyasa.github.io/post/one/</link>
         <pubDate>Sun, 05 Dec 2021 20:44:06 +0800</pubDate>
@@ -35,103 +26,22 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Vercel这边注册个账号就可以了，个人界面如下:&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095440_1.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095440_1.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;开始搭建&#34;&gt;开始搭建&lt;/h2&gt;
 &lt;p&gt;点击界面上的New Porject&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095623_2.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095623_2.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;image-20211204174713418&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;image-20211204174713418&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;之后import自己仓库里的博客项目&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095729_3.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095729_3.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;image-20211204174758553&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;image-20211204174758553&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;再在这个界面输入自己的项目名字后点击create&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095850_4.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204095850_4.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;在这一步会有个小坑，因为是用的Hugo框架所以我在这一步一开始选了Hugo然后部署出了错，后面选着默认的部署成功了，所以在这我选择默认的，大家就不知道会不会遇到啦。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204100147_5.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204100147_5.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;成功啦!&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204100719_6.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204100719_6.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;访问试试看，&lt;!-- raw HTML omitted --&gt;Perfect!&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204100855_7.png&#34; &gt;
-		&lt;img src=&#34;https://images.cnblogs.com/cnblogs_com/MaGnet/2073892/o_211204100855_7.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
 &lt;p&gt;Hugo+Vercel还是很好用的&lt;del&gt;白嫖&lt;/del&gt;,访问速度相比github上也快了不少。在Hugo上还有一些自己的小坑&lt;del&gt;正常都觉得不是问题，太菜鸡了QAQ&lt;/del&gt;后面也会更新出来。&lt;/p&gt;
 </description>
