@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Hugo&#43;Vercel'><title>搭建个人博客</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='React生命周期简析'><title>React生命周期执行流程</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='搭建个人博客'>
-<meta property='og:description' content='Hugo&#43;Vercel'>
-<meta property='og:url' content='https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='React生命周期执行流程'>
+<meta property='og:description' content='React生命周期简析'>
+<meta property='og:url' content='https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Vercel' /><meta property='article:published_time' content='2021-12-05T20:44:06&#43;08:00'/><meta property='article:modified_time' content='2021-12-05T20:44:06&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/one/6.png' />
-<meta name="twitter:title" content="搭建个人博客">
-<meta name="twitter:description" content="Hugo&#43;Vercel"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://loopyasa.github.io/post/one/6.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='React' /><meta property='article:published_time' content='2021-12-07T16:10:25&#43;08:00'/><meta property='article:modified_time' content='2021-12-07T16:10:25&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/three/1.png' />
+<meta name="twitter:title" content="React生命周期执行流程">
+<meta name="twitter:description" content="React生命周期简析"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/three/1.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
                 
-                    <img src="/post/one/6.png" loading="lazy" alt="Featured image of post 搭建个人博客" />
+                    <img src="/post/three/1.png" loading="lazy" alt="Featured image of post React生命周期执行流程" />
                 
             </a>
         </div>
@@ -84,12 +84,12 @@
     
 
     <h2 class="article-title">
-        <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
+        <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">React生命周期执行流程</a>
     </h2>
 
     
     <h3 class="article-subtitle">
-        Hugo&#43;Vercel
+        React生命周期简析
     </h3>
     
 
@@ -106,7 +106,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 05, 2021</time>
+                <time class="article-time--published">Dec 07, 2021</time>
             </div>
         
 
@@ -131,57 +131,44 @@
 </header>
 
     <section class="article-content">
-    <h1 id="hugovercel搭建个人博客">Hugo+Vercel搭建个人博客</h1>
-<h2 id="前言">前言</h2>
-<p>个人在搭建了博客后放在了github上，因为比较慢<del>懒</del>，很长一段时间都闲置了，最近了解了Vercel并且部署了一个node后端小项目后决定将博客部署在Vercel上。</p>
-<h2 id="准备工作">准备工作</h2>
+    <h1 id="react生命周期执行流程">React生命周期执行流程</h1>
+<h2 id="旧版本生命周期">旧版本生命周期</h2>
+<blockquote>
+<p><strong>初始化阶段</strong>:  由ReactDOM.render() 触发&mdash;&ndash;初次渲染</p>
+</blockquote>
 <ul>
-<li>
-<p>Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频。</p>
-
-
-
-
-
-
-    
-
-
-<div class="video-wrapper">
-    <iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;high_quality=1&amp;page=1&bvid=BV1q4411i7gL"
-            scrolling="no"
-            frameborder="no"
-            framespacing="0"
-            allowfullscreen="true"
-    >
-    </iframe>
-</div>
-
-</li>
-<li>
-<p>Vercel这边注册个账号就可以了，个人界面如下:</p>
-<p><figure 
-	>
-	<a href="/post/one/1.png" >
-		<img src="/post/one/1.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
+<li><strong>constructor()</strong></li>
+<li><strong>componentWillMount()</strong></li>
+<li><strong>render()</strong></li>
+<li><!-- raw HTML omitted --><strong>componentDidmount()</strong><!-- raw HTML omitted -->
+<ul>
+<li>常用钩子，一般在这个钩子中做一些初始化的事，例如: 开启定时器、发送网络请求、订阅请求。</li>
+</ul>
 </li>
 </ul>
-<h2 id="开始搭建">开始搭建</h2>
+<blockquote>
+<p><strong>更新阶段</strong>:  由组件内部this.setState()或父组件render触发</p>
+</blockquote>
 <ul>
-<li>点击界面上的New Porject</li>
+<li><strong>shouldComponentUpdate()</strong></li>
+<li><strong>componentWillUpdate()</strong></li>
+<li><strong>render()</strong></li>
+<li><strong>componentDidUpdate()</strong></li>
+</ul>
+<blockquote>
+<p><strong>卸载组件</strong>: 由ReactDOM.unmountComponentAtNode()触发</p>
+</blockquote>
+<ul>
+<li><!-- raw HTML omitted --><strong>componentWillUmount()</strong><!-- raw HTML omitted -->
+<ul>
+<li>常用钩子，一般在这个钩子中做一些收尾的事,例如:关闭定时器、取消订阅。</li>
+</ul>
+</li>
 </ul>
 <p><figure 
 	>
-	<a href="/post/one/2.png" >
-		<img src="/post/one/2.png"
+	<a href="/post/three/3.png" >
+		<img src="/post/three/3.png"
 			
 			
 			
@@ -190,13 +177,50 @@
 	</a>
 	
 </figure></p>
+<h2 id="新版本生命周期">新版本生命周期</h2>
+<blockquote>
+<p><strong>初始化阶段</strong>: 由ReactDOM.render()触发&mdash;&ndash;初次渲染</p>
+</blockquote>
 <ul>
-<li>之后import自己仓库里的博客项目</li>
+<li>
+<p><strong>constructor()</strong></p>
+</li>
+<li>
+<p><strong>getDerivedStateFromPorps</strong></p>
+</li>
+<li>
+<p><strong>render()</strong></p>
+</li>
+<li>
+<p><!-- raw HTML omitted --><strong>componentDidMount()</strong><!-- raw HTML omitted --></p>
+<ul>
+<li>常用钩子，一般在这个钩子中做一些初始化的事，例如: 开启定时器、发送网络请求、订阅请求。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>更新阶段</strong>: 由组件内部this.setState()或者父组件重新render触发</p>
+</blockquote>
+<ul>
+<li><strong>getDerivedStateFromPorps()</strong></li>
+<li><strong>shouldComponentUpdate()</strong></li>
+<li><strong>render()</strong></li>
+<li><strong>getSnapshotBeforeUpdate()</strong></li>
+<li><strong>componentDidUpdate()</strong></li>
+</ul>
+<blockquote>
+<p><strong>卸载组件</strong>: 由ReactDOM.unmountComponentAtNode()触发</p>
+</blockquote>
+<ul>
+<li>
+<p><!-- raw HTML omitted --><strong>componentWillUnmount()</strong><!-- raw HTML omitted --></p>
+<ul>
+<li>常用钩子，一般在这个钩子中做一些收尾的事,例如:关闭定时器、取消订阅。</li>
 </ul>
 <p><figure 
 	>
-	<a href="/post/one/3.png" >
-		<img src="/post/one/3.png"
+	<a href="/post/three/2.png" >
+		<img src="/post/three/2.png"
 			
 			
 			
@@ -205,68 +229,8 @@
 	</a>
 	
 </figure></p>
-<ul>
-<li>再在这个界面输入自己的项目名字后点击create</li>
+</li>
 </ul>
-<p><figure 
-	>
-	<a href="/post/one/4.png" >
-		<img src="/post/one/4.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li><!-- raw HTML omitted -->在这一步会有个小坑，因为是用的Hugo框架所以我在这一步一开始选了Hugo然后部署出了错，后面选着默认的部署成功了，所以在这我选择默认的，大家就不知道会不会遇到啦。<!-- raw HTML omitted --></li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/5.png" >
-		<img src="/post/one/5.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li>成功啦!</li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/6.png" >
-		<img src="/post/one/6.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li>访问试试看，<!-- raw HTML omitted -->Perfect!<!-- raw HTML omitted --></li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/7.png" >
-		<img src="/post/one/7.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<h2 id="总结">总结</h2>
-<p>Hugo+Vercel还是很好用的<del>白嫖</del>,访问速度相比github上也快了不少。在Hugo上还有一些自己的小坑<del>正常都觉得不是问题，太菜鸡了QAQ</del>后面也会更新出来。</p>
 
 </section>
 
@@ -275,9 +239,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/hugo/">Hugo</a>
-        
-            <a href="/tags/vercel/">Vercel</a>
+            <a href="/tags/react/">React</a>
         
     </section>
 
@@ -309,24 +271,6 @@
                 
                     
 <article class="has-image">
-    <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/three/1.png" loading="lazy" data-key="" data-hash="/post/three/1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">React生命周期执行流程</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
     <a href="/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/">
         
         
@@ -339,6 +283,24 @@
 
         <div class="article-details">
             <h2 class="article-title">Vue项目中使用Tailwind CSS</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/one/6.png" loading="lazy" data-key="" data-hash="/post/one/6.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">搭建个人博客</h2>
         </div>
     </a>
 </article>
@@ -480,10 +442,8 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#准备工作">准备工作</a></li>
-    <li><a href="#开始搭建">开始搭建</a></li>
-    <li><a href="#总结">总结</a></li>
+    <li><a href="#旧版本生命周期">旧版本生命周期</a></li>
+    <li><a href="#新版本生命周期">新版本生命周期</a></li>
   </ol>
 </nav>
                 </div>

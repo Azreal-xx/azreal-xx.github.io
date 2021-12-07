@@ -6,7 +6,115 @@
         <description>Recent content on MaGent Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Dec 2021 23:06:19 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 Dec 2021 16:10:25 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>React生命周期执行流程</title>
+        <link>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+        <pubDate>Tue, 07 Dec 2021 16:10:25 +0800</pubDate>
+        
+        <guid>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;img src="https://loopyasa.github.io/post/three/1.png" alt="Featured image of post React生命周期执行流程" /&gt;&lt;h1 id=&#34;react生命周期执行流程&#34;&gt;React生命周期执行流程&lt;/h1&gt;
+&lt;h2 id=&#34;旧版本生命周期&#34;&gt;旧版本生命周期&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;初始化阶段&lt;/strong&gt;:  由ReactDOM.render() 触发&amp;mdash;&amp;ndash;初次渲染&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;constructor()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;componentWillMount()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;render()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;componentDidmount()&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;常用钩子，一般在这个钩子中做一些初始化的事，例如: 开启定时器、发送网络请求、订阅请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;更新阶段&lt;/strong&gt;:  由组件内部this.setState()或父组件render触发&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;shouldComponentUpdate()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;componentWillUpdate()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;render()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;componentDidUpdate()&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;卸载组件&lt;/strong&gt;: 由ReactDOM.unmountComponentAtNode()触发&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;componentWillUmount()&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;常用钩子，一般在这个钩子中做一些收尾的事,例如:关闭定时器、取消订阅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/three/3.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/three/3.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;新版本生命周期&#34;&gt;新版本生命周期&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;初始化阶段&lt;/strong&gt;: 由ReactDOM.render()触发&amp;mdash;&amp;ndash;初次渲染&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;constructor()&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;getDerivedStateFromPorps&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;render()&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;componentDidMount()&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常用钩子，一般在这个钩子中做一些初始化的事，例如: 开启定时器、发送网络请求、订阅请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;更新阶段&lt;/strong&gt;: 由组件内部this.setState()或者父组件重新render触发&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;getDerivedStateFromPorps()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;shouldComponentUpdate()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;render()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;getSnapshotBeforeUpdate()&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;componentDidUpdate()&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;卸载组件&lt;/strong&gt;: 由ReactDOM.unmountComponentAtNode()触发&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;componentWillUnmount()&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常用钩子，一般在这个钩子中做一些收尾的事,例如:关闭定时器、取消订阅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/three/2.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/three/2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Vue项目中使用Tailwind CSS</title>
         <link>https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</link>
         <pubDate>Mon, 06 Dec 2021 23:06:19 +0800</pubDate>
@@ -95,11 +203,26 @@
 &lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频地址。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1q4411i7gL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.bilibili.com/video/BV1q4411i7gL&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频。&lt;/p&gt;
+
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1q4411i7gL&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Vercel这边注册个账号就可以了，个人界面如下:&lt;/p&gt;
@@ -118,7 +241,9 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;开始搭建&#34;&gt;开始搭建&lt;/h2&gt;
-&lt;p&gt;点击界面上的New Porject&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击界面上的New Porject&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://loopyasa.github.io/post/one/2.png&#34; &gt;
@@ -131,7 +256,9 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;之后import自己仓库里的博客项目&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;之后import自己仓库里的博客项目&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://loopyasa.github.io/post/one/3.png&#34; &gt;
@@ -144,7 +271,9 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;再在这个界面输入自己的项目名字后点击create&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;再在这个界面输入自己的项目名字后点击create&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://loopyasa.github.io/post/one/4.png&#34; &gt;
@@ -157,7 +286,9 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;在这一步会有个小坑，因为是用的Hugo框架所以我在这一步一开始选了Hugo然后部署出了错，后面选着默认的部署成功了，所以在这我选择默认的，大家就不知道会不会遇到啦。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;在这一步会有个小坑，因为是用的Hugo框架所以我在这一步一开始选了Hugo然后部署出了错，后面选着默认的部署成功了，所以在这我选择默认的，大家就不知道会不会遇到啦。&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://loopyasa.github.io/post/one/5.png&#34; &gt;
@@ -170,7 +301,9 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;成功啦!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;成功啦!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://loopyasa.github.io/post/one/6.png&#34; &gt;
@@ -183,7 +316,9 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;访问试试看，&lt;!-- raw HTML omitted --&gt;Perfect!&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问试试看，&lt;!-- raw HTML omitted --&gt;Perfect!&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://loopyasa.github.io/post/one/7.png&#34; &gt;
