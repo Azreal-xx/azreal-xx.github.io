@@ -16,5 +16,14 @@
       <description>Vue生命周期执行流程 Vue实例的生命周期 挂载: 初始化相关属性，例如: watch、method属性 beforeCreate created beforeMount mounted 更新: 元素或组件的变更操作 beforeUpdate updated 销毁</description>
     </item>
     
+    <item>
+      <title>React生命周期执行流程</title>
+      <link>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Tue, 07 Dec 2021 16:10:25 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+      <description>React生命周期执行流程 旧版本生命周期 初始化阶段: 由ReactDOM.render() 触发&amp;mdash;&amp;ndash;初次渲染 constructor() componentWillMount() render() componentDidmount() 常用</description>
+    </item>
+    
   </channel>
 </rss>

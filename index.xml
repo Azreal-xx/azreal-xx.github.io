@@ -6,7 +6,99 @@
         <description>Recent content on MaGent Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 08 Dec 2021 13:10:44 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 08 Dec 2021 18:45:30 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>取色器</title>
+        <link>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</link>
+        <pubDate>Wed, 08 Dec 2021 18:45:30 +0800</pubDate>
+        
+        <guid>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</guid>
+        <description>&lt;h1 id=&#34;fork一个取色器&#34;&gt;Fork一个取色器&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;URL&lt;!-- raw HTML omitted --&gt;:&lt;a class=&#34;link&#34; href=&#34;https://flatuicolors.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flat UI Colors 2 - 14 Color Palettes, 280 colors 🎨&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在UI编写的时候经常会用到取色，尤其是自己这种没有审美观的人选色的时候更是拿不定手，这个网址里的颜色会有一种很清晰明了的感觉。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.loli.net/2020/09/14/lXkGqLsJ5BIT6bf.png&#34; &gt;
+		&lt;img src=&#34;https://i.loli.net/2020/09/14/lXkGqLsJ5BIT6bf.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;avatar&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;avatar&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点进去之后是这样的:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.loli.net/2020/09/14/OH6VD9yF2strfZM.png&#34; &gt;
+		&lt;img src=&#34;https://i.loli.net/2020/09/14/OH6VD9yF2strfZM.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;avatar&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;avatar&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后点击需要的颜色就可以了。也可以切换取色的方式:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.loli.net/2020/09/14/nT6QHOFDqyPozef.png&#34; &gt;
+		&lt;img src=&#34;https://i.loli.net/2020/09/14/nT6QHOFDqyPozef.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;avater&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;avater&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还有一个值得一提的功能,网站底部的url里有很多好东西，比如很多人投的UI设计图，如果觉得自己审美不行又有人帮忙但还是想设计一个好看的UI的话不妨去逛逛吧。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.loli.net/2020/09/14/lXkGqLsJ5BIT6bf.png&#34; &gt;
+		&lt;img src=&#34;https://i.loli.net/2020/09/14/lXkGqLsJ5BIT6bf.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;avatar&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;avatar&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Vue生命周期执行流程</title>
         <link>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Wed, 08 Dec 2021 13:10:44 +0800</pubDate>

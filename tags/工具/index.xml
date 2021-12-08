@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on MaGent Blog</title>
+    <link>https://loopyasa.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on MaGent Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Dec 2021 18:45:30 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>取色器</title>
+      <link>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</link>
+      <pubDate>Wed, 08 Dec 2021 18:45:30 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</guid>
+      <description>Fork一个取色器 URL:Flat UI Colors 2 - 14 Color Palettes, 280 colors 🎨 在UI编写的时候经常会用到取色，尤其是自己这种没有审美观的人选色的时候更是拿不定手，这个网址里的颜色</description>
+    </item>
+    
+  </channel>
+</rss>
