@@ -6,7 +6,226 @@
         <description>Recent content on MaGent Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 07 Dec 2021 16:10:25 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 08 Dec 2021 13:10:44 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vue生命周期执行流程</title>
+        <link>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+        <pubDate>Wed, 08 Dec 2021 13:10:44 +0800</pubDate>
+        
+        <guid>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;img src="https://loopyasa.github.io/post/four/1.png" alt="Featured image of post Vue生命周期执行流程" /&gt;&lt;h1 id=&#34;vue生命周期执行流程&#34;&gt;Vue生命周期执行流程&lt;/h1&gt;
+&lt;h2 id=&#34;vue实例的生命周期&#34;&gt;Vue实例的生命周期&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;挂载&lt;/strong&gt;:  初始化相关属性，例如: &lt;code&gt;watch&lt;/code&gt;、&lt;code&gt;method&lt;/code&gt;属性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;beforeCreate&lt;/li&gt;
+&lt;li&gt;created&lt;/li&gt;
+&lt;li&gt;beforeMount&lt;/li&gt;
+&lt;li&gt;mounted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;更新&lt;/strong&gt;: 元素或组件的变更操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;beforeUpdate&lt;/li&gt;
+&lt;li&gt;updated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;销毁&lt;/strong&gt;: 销毁相关属性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;beforeDestroy&lt;/li&gt;
+&lt;li&gt;destroyed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;挂载&#34;&gt;挂载&lt;/h3&gt;
+&lt;h4 id=&#34;第一步&#34;&gt;第一步&lt;/h4&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/four/2.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/four/2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeCreate&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Vue&lt;/code&gt;实例初始化之后，以及事件初始化，以及组件的父子关系确定后执行该钩子函数，一般在开发中很少使用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;created&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在调用该方法之前，初始化会被使用到的状态，状态包括&lt;code&gt;props&lt;/code&gt;,&lt;code&gt;methods&lt;/code&gt;,&lt;code&gt;data&lt;/code&gt;,&lt;code&gt;computed&lt;/code&gt;,&lt;code&gt;watch&lt;/code&gt;而且会实现对&lt;code&gt;data&lt;/code&gt;中属性的监听，也就是在&lt;code&gt;created&lt;/code&gt;的时候数据已经和&lt;code&gt;data&lt;/code&gt;属性进行了绑定。(放在&lt;code&gt;data&lt;/code&gt;中的属性当值发生改变的时候，视图也会改变)。同时也会对传递到组件中的数据进行校验。所以在执行&lt;code&gt;created&lt;/code&gt;的时候，所有的状态都初始化完成，我们也完全可以在该阶段发送异步的&lt;code&gt;ajax&lt;/code&gt;请求，获取数据。但是，在&lt;code&gt;created&lt;/code&gt;方法中，是无法获取到对应的的&lt;code&gt;$el&lt;/code&gt;选项,也就是无法获取&lt;code&gt;Dom&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/four/3.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/four/3.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步&#34;&gt;第二步&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;判断 el&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;created&lt;/code&gt;方法执行完毕后，下面会判断对象中有没有&lt;code&gt;el&lt;/code&gt;选项。如果有，继续执行下面的流程，也就是判断是否有&lt;code&gt;template&lt;/code&gt;选项，如果没有&lt;code&gt;el&lt;/code&gt;选项，则停止整个生命周期的流程，直到执行了&lt;code&gt;vm.$mount(el)&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;el&lt;/code&gt;选项去掉了，执行完&lt;code&gt;created&lt;/code&gt;方法后，整个流程就停止了。不添加&lt;code&gt;el&lt;/code&gt;选项，但是手动执行&lt;code&gt;vm.$mount(el)&lt;/code&gt;,也能够使暂停的生命周期进行下去。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;判断 template&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;如果&lt;code&gt;Vue&lt;/code&gt;实例对象中有&lt;code&gt;template&lt;/code&gt;参数选项，则将其作为模板编译成&lt;code&gt;render&lt;/code&gt;函数，来完成渲染。&lt;/li&gt;
+&lt;li&gt;如果没有&lt;code&gt;template&lt;/code&gt;参数选项，则将外部的&lt;code&gt;HTML作&lt;/code&gt;为模板编译（&lt;code&gt;template&lt;/code&gt;），也就是说，&lt;code&gt;template&lt;/code&gt;参数选项的优先级要比外部的&lt;code&gt;HTML&lt;/code&gt;高。&lt;/li&gt;
+&lt;li&gt;如果第一条,第二条件都不具备，则报错。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Vue&lt;/code&gt;需要通过&lt;code&gt;el&lt;/code&gt;的“选择器”找到对应的&lt;code&gt;template&lt;/code&gt;.也就是说，&lt;code&gt;Vue&lt;/code&gt;首先通过&lt;code&gt;el&lt;/code&gt;参数去查找对应的&lt;code&gt;template&lt;/code&gt;.如果没有找到&lt;code&gt;template&lt;/code&gt;参数，则到外部&lt;code&gt;HTML&lt;/code&gt;中查找，找到后将模板编译成&lt;code&gt;render&lt;/code&gt;。函数（&lt;code&gt;Vue&lt;/code&gt;的编译实际上就是指&lt;code&gt;Vue&lt;/code&gt;把模板编译成&lt;code&gt;render&lt;/code&gt;函数的过程）。还有一点需要注意（&lt;code&gt;template&lt;/code&gt;参数的优先级比外部&lt;code&gt;HTML&lt;/code&gt;的优先级要高。）如果同时有template模板与外部的html，则会优先渲染template里面的数据。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;第三步&#34;&gt;第三步&lt;/h4&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/four/4.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/four/4.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeMount&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;虚拟&lt;code&gt;DOM&lt;/code&gt;已经创建完成，马上就要渲染了，在这里可以更改&lt;code&gt;data&lt;/code&gt;中的数据，不会触发&lt;code&gt;updated&lt;/code&gt;, 其实在&lt;code&gt;created&lt;/code&gt;中也是可以更改数据，也不会触发&lt;code&gt;updated&lt;/code&gt;函数。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;mounted&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行&lt;code&gt;mounted&lt;/code&gt;的时候，可以看到真实的数据。同时整个组件内容已经挂载到页面中了，数据以及真实&lt;code&gt;DOM&lt;/code&gt;都已经处理好了，可以在这里操作真实&lt;code&gt;DOM&lt;/code&gt;了，也就是在&lt;code&gt;mounted&lt;/code&gt;的时候，页面已经被渲染完毕了，在这个钩子函数中，我们可以去发送&lt;code&gt;ajax&lt;/code&gt;请求。&lt;/p&gt;
+&lt;h3 id=&#34;更新&#34;&gt;更新&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/four/5.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/four/5.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeUpdate&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;beoreUpdate&lt;/code&gt;之后有一个非常重要的操作就是虚拟&lt;code&gt;DOM&lt;/code&gt;会重新构建，也就是新构建的虚拟&lt;code&gt;DOM&lt;/code&gt;与上一次的虚拟&lt;code&gt;DOM&lt;/code&gt;树利用&lt;code&gt;diff&lt;/code&gt;算法进行对比之后重新渲染。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;update&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;表示数据已经更新完成，&lt;code&gt;dom&lt;/code&gt;也重新&lt;code&gt;render&lt;/code&gt;完成。&lt;/p&gt;
+&lt;h3 id=&#34;销毁&#34;&gt;销毁&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/four/6.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/four/6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeDestroy&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个钩子函数在实例销毁前调用，在这一步，实例仍然可用。在该方法中，可以做一些清理的工作，例如：清除定时器等。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;destroyed&lt;/strong&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Vue&lt;/code&gt;实例已经被销毁，所有的事件监听器会被移除，所有的子实例也会被销毁&lt;/p&gt;
+&lt;h2 id=&#34;vue生命周期全图&#34;&gt;Vue生命周期全图&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://loopyasa.github.io/post/four/7.png&#34; &gt;
+		&lt;img src=&#34;https://loopyasa.github.io/post/four/7.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeCreate&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在实例初始化之后，数据观测和事件配置之前被调用，此时组件的选项对象还未创建，el 和 data 并未初始化，因此无法访问methods， data， computed等上的方法和数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;created&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;实例已经创建完成之后被调用，在这一步，实例已完成以下配置：数据观测、属性和方法的运算，watch/event事件回调，完成了data 数据的初始化，el没有。 然而，挂在阶段还没有开始, $el属性目前不可见，这是一个常用的生命周期，因为你可以调用methods中的方法，改变data中的数据，并且修改可以通过vue的响应式绑定体现在页面上，，获取computed中的计算属性等等，通常我们可以在这里对实例进行预处理，也有一些童鞋喜欢在这里发ajax请求，值得注意的是，这个周期中是没有什么方法来对实例化过程进行拦截的，因此假如有某些数据必须获取才允许进入页面的话，并不适合在这个方法发请求，建议在组件路由钩子beforeRouteEnter中完成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeMount&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;挂在开始之前被调用，相关的render函数首次被调用（虚拟DOM），实例已完成以下的配置： 编译模板，把data里面的数据和模板生成html，完成了el和data 初始化，注意此时还没有挂在html到页面上。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;mounted&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;挂在完成，也就是模板中的HTML渲染到HTML页面中，此时一般可以做一些ajax操作，mounted只会执行一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;update&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;挂在完成，也就是模板中的HTML渲染到HTML页面中，此时一般可以做一些ajax操作，mounted只会执行一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;beforeDestroy&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在实例销毁之前调用，实例仍然完全可用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这一步还可以用this来获取实例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一般在这一步做一些重置的操作，比如清除掉组件中的定时器 和 监听的dom事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;destroyed&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在实例销毁之后调用，调用后，所以的事件监听器会被移出，所有的子实例也会被销毁，该钩子在服务器端渲染期间不被调用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/wueiwn/p/15238583.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/672e967e201c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考博客&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>React生命周期执行流程</title>
         <link>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Tue, 07 Dec 2021 16:10:25 +0800</pubDate>
