@@ -6,7 +6,16 @@
     <description>Recent content in Posts on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 18:45:30 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 20:02:44 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue动态创建全局组件</title>
+      <link>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Wed, 08 Dec 2021 20:02:44 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</guid>
+      <description>Vue动态创建全局组件 创建全局组件 这是我准备的组件目录结构 创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能 &amp;lt;template&amp;gt; &amp;lt;div</description>
+    </item>
+    
     <item>
       <title>取色器</title>
       <link>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</link>
