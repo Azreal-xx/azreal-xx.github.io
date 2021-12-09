@@ -6,7 +6,16 @@
     <description>Recent content in 笔记 on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 13:10:44 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Dec 2021 10:57:56 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue中的Ajax</title>
+      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
+      <pubDate>Thu, 09 Dec 2021 10:57:56 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</guid>
+      <description>Vue中的Ajax应该在放在哪个钩子函数中 前言 网上看了许多的相关博客，问题范围较广具体很多都是要看业务需求。异步函数并不会阻塞vue生命周期</description>
+    </item>
+    
     <item>
       <title>Vue生命周期执行流程</title>
       <link>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>

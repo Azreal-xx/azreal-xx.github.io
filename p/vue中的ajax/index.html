@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Hugo&#43;Vercel'><title>搭建个人博客</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Vue中的ajax应该放在哪个钩子里'><title>Vue中的Ajax</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='搭建个人博客'>
-<meta property='og:description' content='Hugo&#43;Vercel'>
-<meta property='og:url' content='https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue中的Ajax'>
+<meta property='og:description' content='Vue中的ajax应该放在哪个钩子里'>
+<meta property='og:url' content='https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Vercel' /><meta property='article:published_time' content='2021-12-05T20:44:06&#43;08:00'/><meta property='article:modified_time' content='2021-12-05T20:44:06&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/one/6.png' />
-<meta name="twitter:title" content="搭建个人博客">
-<meta name="twitter:description" content="Hugo&#43;Vercel"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://loopyasa.github.io/post/one/6.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2021-12-09T10:57:56&#43;08:00'/><meta property='article:modified_time' content='2021-12-09T10:57:56&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/seven/1.png' />
+<meta name="twitter:title" content="Vue中的Ajax">
+<meta name="twitter:description" content="Vue中的ajax应该放在哪个钩子里"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/seven/1.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
                 
-                    <img src="/post/one/6.png" loading="lazy" alt="Featured image of post 搭建个人博客" />
+                    <img src="/post/seven/1.png" loading="lazy" alt="Featured image of post Vue中的Ajax" />
                 
             </a>
         </div>
@@ -76,20 +76,20 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E5%8D%9A%E5%AE%A2/" >
-                博客
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
+                笔记
             </a>
         
     </header>
     
 
     <h2 class="article-title">
-        <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
+        <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">Vue中的Ajax</a>
     </h2>
 
     
     <h3 class="article-subtitle">
-        Hugo&#43;Vercel
+        Vue中的ajax应该放在哪个钩子里
     </h3>
     
 
@@ -106,7 +106,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 05, 2021</time>
+                <time class="article-time--published">Dec 09, 2021</time>
             </div>
         
 
@@ -121,7 +121,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -131,142 +131,41 @@
 </header>
 
     <section class="article-content">
-    <h1 id="hugovercel搭建个人博客">Hugo+Vercel搭建个人博客</h1>
+    <h1 id="vue中的ajax应该在放在哪个钩子函数中">Vue中的Ajax应该在放在哪个钩子函数中</h1>
 <h2 id="前言">前言</h2>
-<p>个人在搭建了博客后放在了github上，因为比较慢<del>懒</del>，很长一段时间都闲置了，最近了解了Vercel并且部署了一个node后端小项目后决定将博客部署在Vercel上。</p>
-<h2 id="准备工作">准备工作</h2>
+<p>网上看了许多的相关博客，问题范围较广具体很多都是要看业务需求。异步函数并不会阻塞vue生命周期整个进程，所以在哪个阶段请求都可以，比如也有放在销毁之前的、缓存路由需要在activated做异步请求。但这个问题主要一般存在于created和mounted之间。</p>
+<h2 id="created--mounted">created &amp; mounted</h2>
 <ul>
 <li>
-<p>Hugo搭建博客部署在github上非常简单，大家搜一搜就行了，在这放个羊哥保姆级视频。</p>
-
-
-
-
-
-
-    
-
-
-<div class="video-wrapper">
-    <iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;high_quality=1&amp;page=1&bvid=BV1q4411i7gL"
-            scrolling="no"
-            frameborder="no"
-            framespacing="0"
-            allowfullscreen="true"
-    >
-    </iframe>
-</div>
-
+<p><strong>created</strong></p>
+<blockquote>
+<p>初始化与依赖注入相关的操作，会遍历传入methods的选项，初始化选项数据，从$options获取数据选项(vm.$options.data)，给数据添加‘观察器’对象并创建观察器，定义getter、setter存储器属性。在实例创建之后被调用，该阶段可以访问data，使用watcher、events、methods，也就是说 数据观测(data observer) 和event/watcher 事件配置 已完成。但是此时dom还没有被挂载。该阶段允许执行http请求操作。</p>
+</blockquote>
 </li>
 <li>
-<p>Vercel这边注册个账号就可以了，个人界面如下:</p>
-<p><figure 
-	>
-	<a href="/post/one/1.png" >
-		<img src="/post/one/1.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
+<p><strong>mounted</strong></p>
+<blockquote>
+<p>在挂载完成之后被调用，执行render函数生成虚拟dom，创建真实dom替换虚拟dom，并挂载到实例。可以操作dom，比如事件监听。</p>
+</blockquote>
 </li>
 </ul>
-<h2 id="开始搭建">开始搭建</h2>
+<blockquote>
+<p><strong>对比可以看出created是最早可以访问data的，但是在created阶段并不会生成dom，所以这个阶段无法操作dom。</strong></p>
+</blockquote>
+<h2 id="心得">心得</h2>
+<p>对于一个两个选择都可以的，答案自然在使用者心里。我的体会是:</p>
 <ul>
-<li>点击界面上的New Porject</li>
+<li>
+<blockquote>
+<p>如果是一开始进入一个页面需要显示的数据放在created里，如果是后续和页面交互需要的请求放在mounted里。<strong>简单理解就是(数据操作放created   dom节点操作放mounted)</strong></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>如果考虑到用户体验方面的影响，希望用户今早感知页面已加载，减少空白页面时间，建议就放在created阶段了，然后再处理会出现null、undefined这种情况就好。毕竟越早获取数据，在mounted实例挂载的时候渲染也就越及时。</p>
+</blockquote>
+</li>
 </ul>
-<p><figure 
-	>
-	<a href="/post/one/2.png" >
-		<img src="/post/one/2.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li>之后import自己仓库里的博客项目</li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/3.png" >
-		<img src="/post/one/3.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li>再在这个界面输入自己的项目名字后点击create</li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/4.png" >
-		<img src="/post/one/4.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li><!-- raw HTML omitted -->在这一步会有个小坑，因为是用的Hugo框架所以我在这一步一开始选了Hugo然后部署出了错，后面选着默认的部署成功了，所以在这我选择默认的，大家就不知道会不会遇到啦。<!-- raw HTML omitted --></li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/5.png" >
-		<img src="/post/one/5.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li>成功啦!</li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/6.png" >
-		<img src="/post/one/6.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ul>
-<li>访问试试看，<!-- raw HTML omitted -->Perfect!<!-- raw HTML omitted --></li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/one/7.png" >
-		<img src="/post/one/7.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<h2 id="总结">总结</h2>
-<p>Hugo+Vercel还是很好用的<del>白嫖</del>,访问速度相比github上也快了不少。在Hugo上还有一些自己的小坑<del>正常都觉得不是问题，太菜鸡了QAQ</del>后面也会更新出来。</p>
 
 </section>
 
@@ -275,9 +174,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/hugo/">Hugo</a>
-        
-            <a href="/tags/vercel/">Vercel</a>
+            <a href="/tags/vue/">Vue</a>
         
     </section>
 
@@ -309,36 +206,36 @@
                 
                     
 <article class="has-image">
-    <a href="/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/">
+    <a href="/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
         
         
             <div class="article-image">
                 
-                    <img src="/post/vue.png" loading="lazy" data-key="" data-hash="/post/vue.png"/>
+                    <img src="/post/four/1.png" loading="lazy" data-key="" data-hash="/post/four/1.png"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Vue动态创建全局组件</h2>
+            <h2 class="article-title">Vue生命周期执行流程</h2>
         </div>
     </a>
 </article>
                 
                     
 <article class="has-image">
-    <a href="/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/">
+    <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
         
         
             <div class="article-image">
                 
-                    <img src="/post/two/3.png" loading="lazy" data-key="" data-hash="/post/two/3.png"/>
+                    <img src="/post/three/1.png" loading="lazy" data-key="" data-hash="/post/three/1.png"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Vue项目中使用Tailwind CSS</h2>
+            <h2 class="article-title">React生命周期执行流程</h2>
         </div>
     </a>
 </article>
@@ -481,9 +378,8 @@
                     <nav id="TableOfContents">
   <ol>
     <li><a href="#前言">前言</a></li>
-    <li><a href="#准备工作">准备工作</a></li>
-    <li><a href="#开始搭建">开始搭建</a></li>
-    <li><a href="#总结">总结</a></li>
+    <li><a href="#created--mounted">created &amp; mounted</a></li>
+    <li><a href="#心得">心得</a></li>
   </ol>
 </nav>
                 </div>

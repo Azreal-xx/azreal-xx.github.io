@@ -6,13 +6,56 @@
         <description>Recent content on MaGent Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 08 Dec 2021 20:02:44 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 09 Dec 2021 10:57:56 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vue中的Ajax</title>
+        <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
+        <pubDate>Thu, 09 Dec 2021 10:57:56 +0800</pubDate>
+        
+        <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</guid>
+        <description>&lt;img src="https://loopyasa.github.io/post/seven/1.png" alt="Featured image of post Vue中的Ajax" /&gt;&lt;h1 id=&#34;vue中的ajax应该在放在哪个钩子函数中&#34;&gt;Vue中的Ajax应该在放在哪个钩子函数中&lt;/h1&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;网上看了许多的相关博客，问题范围较广具体很多都是要看业务需求。异步函数并不会阻塞vue生命周期整个进程，所以在哪个阶段请求都可以，比如也有放在销毁之前的、缓存路由需要在activated做异步请求。但这个问题主要一般存在于created和mounted之间。&lt;/p&gt;
+&lt;h2 id=&#34;created--mounted&#34;&gt;created &amp;amp; mounted&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;created&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;初始化与依赖注入相关的操作，会遍历传入methods的选项，初始化选项数据，从$options获取数据选项(vm.$options.data)，给数据添加‘观察器’对象并创建观察器，定义getter、setter存储器属性。在实例创建之后被调用，该阶段可以访问data，使用watcher、events、methods，也就是说 数据观测(data observer) 和event/watcher 事件配置 已完成。但是此时dom还没有被挂载。该阶段允许执行http请求操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;mounted&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在挂载完成之后被调用，执行render函数生成虚拟dom，创建真实dom替换虚拟dom，并挂载到实例。可以操作dom，比如事件监听。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;对比可以看出created是最早可以访问data的，但是在created阶段并不会生成dom，所以这个阶段无法操作dom。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;心得&#34;&gt;心得&lt;/h2&gt;
+&lt;p&gt;对于一个两个选择都可以的，答案自然在使用者心里。我的体会是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果是一开始进入一个页面需要显示的数据放在created里，如果是后续和页面交互需要的请求放在mounted里。&lt;strong&gt;简单理解就是(数据操作放created   dom节点操作放mounted)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果考虑到用户体验方面的影响，希望用户今早感知页面已加载，减少空白页面时间，建议就放在created阶段了，然后再处理会出现null、undefined这种情况就好。毕竟越早获取数据，在mounted实例挂载的时候渲染也就越及时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Vue动态创建全局组件</title>
         <link>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</link>
         <pubDate>Wed, 08 Dec 2021 20:02:44 +0800</pubDate>
         
         <guid>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</guid>
-        <description>&lt;img src="https://loopyasa.github.io/post/six/1.png" alt="Featured image of post Vue动态创建全局组件" /&gt;&lt;h1 id=&#34;vue动态创建全局组件&#34;&gt;Vue动态创建全局组件&lt;/h1&gt;
+        <description>&lt;img src="https://loopyasa.github.io/post/vue.png" alt="Featured image of post Vue动态创建全局组件" /&gt;&lt;h1 id=&#34;vue动态创建全局组件&#34;&gt;Vue动态创建全局组件&lt;/h1&gt;
 &lt;h2 id=&#34;创建全局组件&#34;&gt;创建全局组件&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;这是我准备的组件目录结构&lt;/li&gt;
