@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='React生命周期简析'><title>React生命周期执行流程</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Cookie localStorage sessionStorage Cookie Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用'><title>Cookie  localStorage  sessionStorage</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='React生命周期执行流程'>
-<meta property='og:description' content='React生命周期简析'>
-<meta property='og:url' content='https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Cookie  localStorage  sessionStorage'>
+<meta property='og:description' content='Cookie localStorage sessionStorage Cookie Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用'>
+<meta property='og:url' content='https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='React' /><meta property='article:published_time' content='2021-12-07T16:10:25&#43;08:00'/><meta property='article:modified_time' content='2021-12-07T16:10:25&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/three/1.png' />
-<meta name="twitter:title" content="React生命周期执行流程">
-<meta name="twitter:description" content="React生命周期简析"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://loopyasa.github.io/post/three/1.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='JS' /><meta property='article:published_time' content='2021-12-09T22:41:52&#43;08:00'/><meta property='article:modified_time' content='2021-12-09T22:41:52&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/eight/1.png' />
+<meta name="twitter:title" content="Cookie  localStorage  sessionStorage">
+<meta name="twitter:description" content="Cookie localStorage sessionStorage Cookie Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/eight/1.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
+            <a href="/p/cookie-localstorage-sessionstorage/">
                 
-                    <img src="/post/three/1.png" loading="lazy" alt="Featured image of post React生命周期执行流程" />
+                    <img src="/post/eight/1.png" loading="lazy" alt="Featured image of post Cookie  localStorage  sessionStorage" />
                 
             </a>
         </div>
@@ -84,13 +84,9 @@
     
 
     <h2 class="article-title">
-        <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">React生命周期执行流程</a>
+        <a href="/p/cookie-localstorage-sessionstorage/">Cookie  localStorage  sessionStorage</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        React生命周期简析
-    </h3>
     
 
     
@@ -106,7 +102,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 07, 2021</time>
+                <time class="article-time--published">Dec 09, 2021</time>
             </div>
         
 
@@ -121,7 +117,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -131,106 +127,118 @@
 </header>
 
     <section class="article-content">
-    <h1 id="react生命周期执行流程">React生命周期执行流程</h1>
-<h2 id="旧版本生命周期">旧版本生命周期</h2>
-<blockquote>
-<p><strong>初始化阶段</strong>:  由ReactDOM.render() 触发&mdash;&ndash;初次渲染</p>
-</blockquote>
-<ul>
-<li><strong>constructor()</strong></li>
-<li><strong>componentWillMount()</strong></li>
-<li><strong>render()</strong></li>
-<li><!-- raw HTML omitted --><strong>componentDidmount()</strong><!-- raw HTML omitted -->
-<ul>
-<li>常用钩子，一般在这个钩子中做一些初始化的事，例如: 开启定时器、发送网络请求、订阅请求。</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><strong>更新阶段</strong>:  由组件内部this.setState()或父组件render触发</p>
-</blockquote>
-<ul>
-<li><strong>shouldComponentUpdate()</strong></li>
-<li><strong>componentWillUpdate()</strong></li>
-<li><strong>render()</strong></li>
-<li><strong>componentDidUpdate()</strong></li>
-</ul>
-<blockquote>
-<p><strong>卸载组件</strong>: 由ReactDOM.unmountComponentAtNode()触发</p>
-</blockquote>
-<ul>
-<li><!-- raw HTML omitted --><strong>componentWillUmount()</strong><!-- raw HTML omitted -->
-<ul>
-<li>常用钩子，一般在这个钩子中做一些收尾的事,例如:关闭定时器、取消订阅。</li>
-</ul>
-</li>
-</ul>
-<p><figure 
-	>
-	<a href="/post/three/3.png" >
-		<img src="/post/three/3.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<h2 id="新版本生命周期">新版本生命周期</h2>
-<blockquote>
-<p><strong>初始化阶段</strong>: 由ReactDOM.render()触发&mdash;&ndash;初次渲染</p>
-</blockquote>
+    <h1 id="cookie--localstorage--sessionstorage">Cookie  localStorage  sessionStorage</h1>
+<h2 id="cookie">Cookie</h2>
+<p>Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用就是用于解决 &ldquo;如何记录客户端的用户信息&rdquo;。<strong>Cookie使用是遵循同源策略的</strong></p>
 <ul>
 <li>
-<p><strong>constructor()</strong></p>
-</li>
+<p>创建cookie</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="o">=</span><span class="s2">&#34;username=John Doe&#34;</span><span class="p">;</span>
+</code></pre></div></li>
 <li>
-<p><strong>getDerivedStateFromPorps</strong></p>
-</li>
+<p>给cookie添加过期时间，默认情况下，cookie 在浏览器关闭时删除。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="o">=</span><span class="s2">&#34;username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT&#34;</span><span class="p">;</span>
+</code></pre></div></li>
 <li>
-<p><strong>render()</strong></p>
-</li>
+<p>告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="o">=</span><span class="s2">&#34;username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/&#34;</span><span class="p">;</span>
+</code></pre></div></li>
 <li>
-<p><!-- raw HTML omitted --><strong>componentDidMount()</strong><!-- raw HTML omitted --></p>
-<ul>
-<li>常用钩子，一般在这个钩子中做一些初始化的事，例如: 开启定时器、发送网络请求、订阅请求。</li>
+<p>删除cookie&mdash;-设置 expires 参数为以前的时间即可，如下所示，设置为 Thu, 01 Jan 1970 00:00:00 GMT</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&#34;username=; expires=Thu, 01 Jan 1970 00:00:00 GMT&#34;</span><span class="p">;</span>
+</code></pre></div></li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<p><strong>更新阶段</strong>: 由组件内部this.setState()或者父组件重新render触发</p>
-</blockquote>
-<ul>
-<li><strong>getDerivedStateFromPorps()</strong></li>
-<li><strong>shouldComponentUpdate()</strong></li>
-<li><strong>render()</strong></li>
-<li><strong>getSnapshotBeforeUpdate()</strong></li>
-<li><strong>componentDidUpdate()</strong></li>
-</ul>
-<blockquote>
-<p><strong>卸载组件</strong>: 由ReactDOM.unmountComponentAtNode()触发</p>
-</blockquote>
+<h2 id="localstorage">localStorage</h2>
+<p>localStorage 属性允许在浏览器中存储 key/value 对的数据。localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去删除。<strong>localStorage 的使用也是遵循同源策略的，所以不同的网站直接是不能共用相同的 localStorage</strong>。</p>
 <ul>
 <li>
-<p><!-- raw HTML omitted --><strong>componentWillUnmount()</strong><!-- raw HTML omitted --></p>
+<p>保存数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&#34;key&#34;</span><span class="p">,</span> <span class="s2">&#34;value&#34;</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>读取数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">lastname</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;key&#34;</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>删除数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s2">&#34;key&#34;</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h2 id="sessionstorage">sessionStorage</h2>
+<p>sessionStorage 属性允许在浏览器中存储 key/value 对的数据。sessionStorage 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。</p>
 <ul>
-<li>常用钩子，一般在这个钩子中做一些收尾的事,例如:关闭定时器、取消订阅。</li>
+<li>
+<p>保存数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&#34;key&#34;</span><span class="p">,</span> <span class="s2">&#34;value&#34;</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>读取数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">lastname</span> <span class="o">=</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;key&#34;</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>删除数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s2">&#34;key&#34;</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>删除所有数据</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+</code></pre></div></li>
 </ul>
-<p><figure 
-	>
-	<a href="/post/three/2.png" >
-		<img src="/post/three/2.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-</li>
-</ul>
+<h2 id="总结">总结</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Cookie</th>
+<th style="text-align:center">localStorage</th>
+<th style="text-align:center">sessionStorage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">大小</td>
+<td style="text-align:center">4kb</td>
+<td style="text-align:center">10Mb</td>
+<td style="text-align:center">5Mb</td>
+</tr>
+<tr>
+<td style="text-align:center">兼容</td>
+<td style="text-align:center">H4/H5</td>
+<td style="text-align:center">H5</td>
+<td style="text-align:center">H5</td>
+</tr>
+<tr>
+<td style="text-align:center">访问</td>
+<td style="text-align:center">任何窗口</td>
+<td style="text-align:center">任何窗口</td>
+<td style="text-align:center">同一窗口</td>
+</tr>
+<tr>
+<td style="text-align:center">有效期</td>
+<td style="text-align:center">手动设置</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">到窗口关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">存储位置</td>
+<td style="text-align:center">浏览器和服务器</td>
+<td style="text-align:center">浏览器</td>
+<td style="text-align:center">浏览器</td>
+</tr>
+<tr>
+<td style="text-align:center">与请求一起发送</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:center">语法</td>
+<td style="text-align:center">复杂</td>
+<td style="text-align:center">简易</td>
+<td style="text-align:center">简易</td>
+</tr>
+</tbody>
+</table>
 
 </section>
 
@@ -239,7 +247,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/react/">React</a>
+            <a href="/tags/js/">JS</a>
         
     </section>
 
@@ -289,24 +297,6 @@
                 
                     
 <article class="has-image">
-    <a href="/p/cookie-localstorage-sessionstorage/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/eight/1.png" loading="lazy" data-key="" data-hash="/post/eight/1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Cookie  localStorage  sessionStorage</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
     <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
         
         
@@ -337,6 +327,24 @@
 
         <div class="article-details">
             <h2 class="article-title">Vue生命周期执行流程</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/three/1.png" loading="lazy" data-key="" data-hash="/post/three/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">React生命周期执行流程</h2>
         </div>
     </a>
 </article>
@@ -478,8 +486,10 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#旧版本生命周期">旧版本生命周期</a></li>
-    <li><a href="#新版本生命周期">新版本生命周期</a></li>
+    <li><a href="#cookie">Cookie</a></li>
+    <li><a href="#localstorage">localStorage</a></li>
+    <li><a href="#sessionstorage">sessionStorage</a></li>
+    <li><a href="#总结">总结</a></li>
   </ol>
 </nav>
                 </div>

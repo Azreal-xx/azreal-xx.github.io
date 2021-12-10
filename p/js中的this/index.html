@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='JS中的this 定义 函数的 this 关键字在 JavaScript 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定'><title>JS中的this</title>
+
+<link rel='canonical' href='https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='JS中的this'>
+<meta property='og:description' content='JS中的this 定义 函数的 this 关键字在 JavaScript 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定'>
+<meta property='og:url' content='https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/'>
+<meta property='og:site_name' content='MaGent Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='JS' /><meta property='article:published_time' content='2021-12-10T12:30:07&#43;08:00'/><meta property='article:modified_time' content='2021-12-10T12:30:07&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/nine/1.png' />
+<meta name="twitter:title" content="JS中的this">
+<meta name="twitter:description" content="JS中的this 定义 函数的 this 关键字在 JavaScript 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/nine/1.png' />
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/js%E4%B8%AD%E7%9A%84this/">
+                
+                    <img src="/post/nine/1.png" loading="lazy" alt="Featured image of post JS中的this" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
+                笔记
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/js%E4%B8%AD%E7%9A%84this/">JS中的this</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 10, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="js中的this">JS中的this</h1>
+<h2 id="定义">定义</h2>
+<p>函数的 <code>this</code> 关键字在 <code>JavaScript</code> 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定了 <code>this</code> 的值（运行时绑定）<code>this</code> 关键字是函数运行时自动生成的一个内部对象，只能在函数内部使用，总指向调用它的对象。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">baz</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 当前调用栈是：baz
+</span><span class="c1"></span>    <span class="c1">// 因此，当前调用位置是全局作用域
+</span><span class="c1"></span>    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">&#34;baz&#34;</span> <span class="p">);</span>
+    <span class="nx">bar</span><span class="p">();</span> <span class="c1">// &lt;-- bar的调用位置
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">bar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 当前调用栈是：baz --&gt; bar
+</span><span class="c1"></span>    <span class="c1">// 因此，当前调用位置在baz中
+</span><span class="c1"></span>    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">&#34;bar&#34;</span> <span class="p">);</span>
+    <span class="nx">foo</span><span class="p">();</span> <span class="c1">// &lt;-- foo的调用位置
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 当前调用栈是：baz --&gt; bar --&gt; foo
+</span><span class="c1"></span>    <span class="c1">// 因此，当前调用位置在bar中
+</span><span class="c1"></span>    
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">&#34;foo&#34;</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">baz</span><span class="p">();</span> <span class="c1">// &lt;-- baz的调用位置
+</span></code></pre></div><p>同时，<code>this</code>在函数执行过程中，<code>this</code>一旦被确定了，就不可以再更改。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">a</span><span class="o">:</span> <span class="mi">20</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">fn</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span> <span class="c1">// 修改this，运行后会报错
+</span><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">fn</span><span class="p">();</span>
+</code></pre></div><h2 id="绑定规则">绑定规则</h2>
+<p>根据不同的使用场合，<code>this</code>有不同的值，主要分为下面几种情况：</p>
+<h3 id="默认绑定"><strong>默认绑定</strong></h3>
+<p>​	全局环境中定义<code>person</code>函数，内部使用<code>this</code>关键字</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Jenny&#39;</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">person</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">());</span>  <span class="c1">//Jenny
+</span></code></pre></div></blockquote>
+<p>上述代码输出<code>Jenny</code>，原因是调用函数的对象在游览器中位<code>window</code>，因此<code>this</code>指向<code>window</code>，所以输出<code>Jenny</code></p>
+<p>注意：</p>
+<p>严格模式下，不能将全局对象用于默认绑定，this会绑定到<code>undefined</code>，只有函数运行在非严格模式下，默认绑定才能绑定到全局对象</p>
+<h3 id="隐式绑定"><strong>隐式绑定</strong></h3>
+<p>​	函数还可以作为某个对象的方法调用，这时<code>this</code>就指这个上级对象</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+<span class="p">}</span>
+  
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">m</span> <span class="o">=</span> <span class="nx">test</span><span class="p">;</span>
+
+<span class="nx">obj</span><span class="p">.</span><span class="nx">m</span><span class="p">();</span> <span class="c1">// 1
+</span></code></pre></div><p>这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，<code>this</code>指向的也只是它上一级的对象</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="nx">a</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+ <span class="nx">b</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">fn</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span> <span class="c1">//undefined
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="nx">o</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+</code></pre></div><p>上述代码中，<code>this</code>的上一级对象为<code>b</code>，<code>b</code>内部并没有<code>a</code>变量的定义，所以输出<code>undefined</code></p>
+<p>这里再举一种特殊情况</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="nx">a</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span>
+ <span class="nx">b</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">a</span><span class="o">:</span><span class="mi">12</span><span class="p">,</span>
+        <span class="nx">fn</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span> <span class="c1">//undefined
+</span><span class="c1"></span>            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">//window
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">o</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">fn</span><span class="p">;</span>
+<span class="nx">j</span><span class="p">();</span>
+</code></pre></div><p>此时<code>this</code>指向的是<code>window</code>，这里的大家需要记住，<code>this</code>永远指向的是最后调用它的对象，虽然<code>fn</code>是对象<code>b</code>的方法，但是<code>fn</code>赋值给<code>j</code>时候并没有执行，所以最终指向<code>window</code>。</p>
+</blockquote>
+<h3 id="构建函数绑定"><strong>构建函数绑定</strong></h3>
+<p>​	通过构建函数<code>new</code>关键字生成一个实例对象，此时<code>this</code>指向这个实例对象</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+　<span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">test</span><span class="p">();</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">x</span> <span class="c1">// 1
+</span></code></pre></div><p>上述代码之所以能过输出1，是因为<code>new</code>关键字改变了<code>this</code>的指向</p>
+<p>这里再列举一些特殊情况：</p>
+<p><code>new</code>过程遇到<code>return</code>一个对象，此时<code>this</code>指向为返回的对象</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">fn</span><span class="p">()</span>  
+<span class="p">{</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="s1">&#39;xxx&#39;</span><span class="p">;</span>  
+    <span class="k">return</span> <span class="p">{};</span>  
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fn</span><span class="p">();</span>  
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span> <span class="c1">//undefined
+</span></code></pre></div><p>如果返回一个简单类型的时候，则<code>this</code>指向实例对象</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">fn</span><span class="p">()</span>  
+<span class="p">{</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="s1">&#39;xxx&#39;</span><span class="p">;</span>  
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fn</span><span class="p">;</span>  
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span> <span class="c1">//xxx
+</span></code></pre></div><p>注意的是<code>null</code>虽然也是对象，但是此时<code>new</code>仍然指向实例对象</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">fn</span><span class="p">()</span>  
+<span class="p">{</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="s1">&#39;xxx&#39;</span><span class="p">;</span>  
+    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">fn</span><span class="p">;</span>  
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">user</span><span class="p">);</span> <span class="c1">//xxx
+</span></code></pre></div></blockquote>
+<h3 id="显示绑定"><strong>显示绑定</strong></h3>
+<p>​	<code>apply()、call()、bind()</code>是函数的一个方法，作用是改变函数的调用对象。它的第一个参数就表示改变后的调用这个函数的对象。因此，这时<code>this</code>指的就是这第一个参数。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+　<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">m</span> <span class="o">=</span> <span class="nx">test</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">m</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="c1">// 1
+</span></code></pre></div><h4 id="apply">apply()</h4>
+<p><code>apply</code>接受两个参数，第一个参数是<code>this</code>的指向，第二个参数是函数接受的参数，以数组的形式传入</p>
+<p>改变<code>this</code>指向后原函数会立即执行，且此方法只是临时改变<code>this</code>指向一次</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">fn</span><span class="p">(...</span><span class="nx">args</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">myname</span><span class="o">:</span><span class="s2">&#34;张三&#34;</span>
+<span class="p">}</span>
+
+<span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">obj</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// this会变成传入的obj，传入的参数必须是一个数组；
+</span><span class="c1"></span><span class="nx">fn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// this指向window
+</span></code></pre></div><p>当第一个参数为<code>null</code>、<code>undefined</code>的时候，默认指向<code>window</code>(在浏览器中)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// this指向window
+</span><span class="c1"></span><span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// this指向window
+</span></code></pre></div><h4 id="call">call()</h4>
+<p><code>call</code>方法的第一个参数也是<code>this</code>的指向，后面传入的是一个参数列表</p>
+<p>跟<code>apply</code>一样，改变<code>this</code>指向后原函数会立即执行，且此方法只是临时改变<code>this</code>指向一次</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">fn</span><span class="p">(...</span><span class="nx">args</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">myname</span><span class="o">:</span><span class="s2">&#34;张三&#34;</span>
+<span class="p">}</span>
+
+<span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// this会变成传入的obj，传入的参数必须是一个数组；
+</span><span class="c1"></span><span class="nx">fn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// this指向window
+</span></code></pre></div><p>同样的，当第一个参数为<code>null</code>、<code>undefined</code>的时候，默认指向<code>window</code>(在浏览器中)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">null</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// this指向window
+</span><span class="c1"></span><span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// this指向window
+</span></code></pre></div><h4 id="bind">bind()</h4>
+<p>bind方法和call很相似，第一参数也是<code>this</code>的指向，后面传入的也是一个参数列表(但是这个参数列表可以分多次传入)</p>
+<p>改变<code>this</code>指向后不会立即执行，而是返回一个永久改变<code>this</code>指向的函数</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">fn</span><span class="p">(...</span><span class="nx">args</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">myname</span><span class="o">:</span><span class="s2">&#34;张三&#34;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">bindFn</span> <span class="o">=</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span> <span class="c1">// this 也会变成传入的obj ，bind不是立即执行需要执行一次
+</span><span class="c1"></span><span class="nx">bindFn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// this指向obj
+</span><span class="c1"></span><span class="nx">fn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// this指向window
+</span></code></pre></div><h4 id="小结">小结</h4>
+<p><code>apply</code>、<code>call</code>、<code>bind</code>三者的区别:</p>
+<ul>
+<li>
+<p>三者都可以改变函数的<code>this</code>对象指向</p>
+</li>
+<li>
+<p>三者第一个参数都是<code>this</code>要指向的对象，如果如果没有这个参数或参数为<code>undefined</code>或<code>null</code>，则默认指向全局<code>window</code></p>
+</li>
+<li>
+<p>三者都可以传参，但是<code>apply</code>是数组，而<code>call</code>是参数列表，且<code>apply</code>和<code>call</code>是一次性传入参数，而<code>bind</code>可以分为多次传入</p>
+</li>
+<li>
+<p><code>bind </code>是返回绑定this之后的函数，<code>apply </code>、<code>call</code> 则是立即执行</p>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/js/">JS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/cookie-localstorage-sessionstorage/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/eight/1.png" loading="lazy" data-key="" data-hash="/post/eight/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cookie  localStorage  sessionStorage</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/seven/1.png" loading="lazy" data-key="" data-hash="/post/seven/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue中的Ajax</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/four/1.png" loading="lazy" data-key="" data-hash="/post/four/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue生命周期执行流程</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/three/1.png" loading="lazy" data-key="" data-hash="/post/three/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">React生命周期执行流程</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        <head>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+<body>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'y8mziDx1WK7ScGpENqrffBEO-gzGzoHsz',
+            appKey: 'HSM2AhRxPLvuebclx4491dsb'
+        })
+    </script>
+</body>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 MaGent Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#绑定规则">绑定规则</a>
+      <ol>
+        <li><a href="#默认绑定"><strong>默认绑定</strong></a></li>
+        <li><a href="#隐式绑定"><strong>隐式绑定</strong></a></li>
+        <li><a href="#构建函数绑定"><strong>构建函数绑定</strong></a></li>
+        <li><a href="#显示绑定"><strong>显示绑定</strong></a>
+          <ol>
+            <li><a href="#apply">apply()</a></li>
+            <li><a href="#call">call()</a></li>
+            <li><a href="#bind">bind()</a></li>
+            <li><a href="#小结">小结</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

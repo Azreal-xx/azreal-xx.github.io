@@ -6,7 +6,25 @@
     <description>Recent content in 笔记 on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Dec 2021 10:57:56 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 12:30:07 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JS中的this</title>
+      <link>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</link>
+      <pubDate>Fri, 10 Dec 2021 12:30:07 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</guid>
+      <description>JS中的this 定义 函数的 this 关键字在 JavaScript 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定</description>
+    </item>
+    
+    <item>
+      <title>Cookie  localStorage  sessionStorage</title>
+      <link>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</link>
+      <pubDate>Thu, 09 Dec 2021 22:41:52 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</guid>
+      <description>Cookie localStorage sessionStorage Cookie Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用</description>
+    </item>
+    
     <item>
       <title>Vue中的Ajax</title>
       <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
