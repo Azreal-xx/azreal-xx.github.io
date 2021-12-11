@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Vue自定义指令 指令 指令 (Directives)： 是带有 v- 前缀的特殊属性， 职责是，当表达式的值改变时， 将其产生的连带影响，响应式地作用于 DO'><title>Vue自定义指令</title>
+
+<link rel='canonical' href='https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue自定义指令'>
+<meta property='og:description' content='Vue自定义指令 指令 指令 (Directives)： 是带有 v- 前缀的特殊属性， 职责是，当表达式的值改变时， 将其产生的连带影响，响应式地作用于 DO'>
+<meta property='og:url' content='https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/'>
+<meta property='og:site_name' content='MaGent Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2021-12-11T13:57:21&#43;08:00'/><meta property='article:modified_time' content='2021-12-11T13:57:21&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/vue.png' />
+<meta name="twitter:title" content="Vue自定义指令">
+<meta name="twitter:description" content="Vue自定义指令 指令 指令 (Directives)： 是带有 v- 前缀的特殊属性， 职责是，当表达式的值改变时， 将其产生的连带影响，响应式地作用于 DO"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/vue.png' />
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/">
+                
+                    <img src="/post/vue.png" loading="lazy" alt="Featured image of post Vue自定义指令" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%8D%9A%E5%AE%A2/" >
+                博客
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/">Vue自定义指令</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 11, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="vue自定义指令">Vue自定义指令</h1>
+<h2 id="指令">指令</h2>
+<p><strong>指令 (Directives)</strong>： 是带有 v- 前缀的特殊属性， 职责是，当表达式的值改变时， 将其产生的连带影响，响应式地作用于 DOM。</p>
+<h2 id="内置指令">内置指令</h2>
+<p>先来看看Vue中的内置指令</p>
+<ul>
+<li>
+<p>v-bind: 响应并更新DOM特性；例如：v-bind:href  v-bind:class  v-bind:title  v-bind:bb</p>
+</li>
+<li>
+<p>v-on：用于监听DOM事件； 例如：v-on:click  v-on:keyup</p>
+</li>
+<li>
+<p>v-model：数据双向绑定；用于表单输入等；例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">input</span> <span class="nt">v-model</span><span class="s">=&#34;message&#34;</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>v-show：条件渲染指令，为DOM设置css的style属性</p>
+</li>
+<li>
+<p>v-if：条件渲染指令，动态在DOM内添加或删除DOM元素</p>
+</li>
+<li>
+<p>v-else：条件渲染指令，必须跟v-if成对使用</p>
+</li>
+<li>
+<p>v-for：循环指令；例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">li</span> <span class="nt">v-for</span><span class="s">=&#34;(item,index) in todos&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>v-else-if：判断多层条件，必须跟v-if成对使用</p>
+</li>
+<li>
+<p>v-text：更新元素的textContent；例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-text</span><span class="s">=&#34;msg&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div><p>等同于</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;{{</span><span class="nx">msg</span><span class="p">}}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>v-html：更新元素的innerHTML</p>
+</li>
+<li>
+<p>v-pre：不需要表达式，跳过这个元素以及子元素的编译过程，以此来加快整个项目的编译速度；例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-pre</span><span class="p">&gt;{{</span> <span class="na">this</span> <span class="na">will</span> <span class="na">not</span> <span class="na">be</span> <span class="na">compiled</span> <span class="p">}}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>v-cloak：不需要表达式，这个指令保持在元素上直到关联实例结束编译</p>
+</li>
+<li>
+<p>v-once：不需要表达式，只渲染元素或组件一次，随后的渲染，组件/元素以及下面的子元素都当成静态页面不在渲染</p>
+</li>
+</ul>
+<h2 id="自定义指令">自定义指令</h2>
+<h3 id="局部自定义指令">局部自定义指令</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-multiply</span><span class="s">=&#34;number&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="nx">number</span><span class="o">:</span><span class="p">{{</span><span class="nx">number</span><span class="p">}}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;number++&#34;</span><span class="p">&gt;</span><span class="na">操作</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;WorkspaceJsonTestCom&#39;</span><span class="p">,</span>
+
+    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="nx">number</span><span class="o">:</span> <span class="mi">1</span>
+        <span class="p">};</span>
+    <span class="p">},</span>
+    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
+        
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h4 id="函数式">函数式</h4>
+<p>先来看看函数式的参数</p>
+<ul>
+<li>
+<p>element</p>
+<blockquote>
+<p>指令所绑定的元素，可以用来直接操作 DOM 。</p>
+</blockquote>
+</li>
+<li>
+<p>binding</p>
+<blockquote>
+<ul>
+<li>
+<p>name：指令名，不包含v-的前缀；</p>
+</li>
+<li>
+<p>value：指令的绑定值；例如：v-my-directive=&ldquo;1+1&rdquo;，value的值是2；</p>
+</li>
+<li>
+<p>oldValue：指令绑定的前一个值，仅在update和componentUpdated钩子函数中可用，无论值是否改变都可用；</p>
+</li>
+<li>
+<p>expression：绑定值的字符串形式；例如：v-my-directive=&ldquo;1+1&rdquo;，expression的值是'1+1'；</p>
+</li>
+<li>
+<p>arg：传给指令的参数；例如：v-my-directive:foo，arg的值为 &lsquo;foo&rsquo;；</p>
+</li>
+<li>
+<p>modifiers：一个包含修饰符的对象；例如：v-my-directive.a.b，modifiers的值为{&lsquo;a&rsquo;:true,&lsquo;b&rsquo;:true}</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>vnode</p>
+<blockquote>
+<p>Vue编译的生成虚拟节点。</p>
+</blockquote>
+</li>
+<li>
+<p>oldVnode</p>
+<blockquote>
+<p>上一次的虚拟节点，仅在update和componentUpdated钩子函数中可用。</p>
+</blockquote>
+</li>
+</ul>
+<p><figure 
+	>
+	<a href="/post/eleven/2.png" >
+		<img src="/post/eleven/2.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>现在以函数式实现一个简单的功能，使用自定义v-multiply将number*10并展示在页面</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">multiply</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">,</span> <span class="nx">vnode</span><span class="p">,</span> <span class="nx">oldVnode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;指令number:&#39;</span> <span class="o">+</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>效果</p>
+<p><figure 
+	>
+	<a href="/post/eleven/7.gif" >
+		<img src="/post/eleven/7.gif"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h4 id="对象式">对象式</h4>
+<p>再来看看对象式</p>
+<blockquote>
+<p>对象式有着自己的生命周期函数</p>
+<ul>
+<li>页面加载时：bind inserted</li>
+<li>更新组件：update componentUpdated</li>
+<li>卸载组件：unbind</li>
+<li>重新安装组件：bind inserted</li>
+</ul>
+</blockquote>
+<p><strong>注意区别</strong>：bind与inserted：bind时父节点为null，inserted时父节点存在；update与componentUpdated：update是数据更新前，componentUpdated是数据更新后。</p>
+<p>还是上面的功能，以对象式完成</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">// 对象式
+</span><span class="c1"></span>    <span class="nx">multiply</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// 指令与元素成功绑定
+</span><span class="c1"></span>        <span class="nx">bind</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;指令number:&#39;</span> <span class="o">+</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="c1">// 指令所在元素被插入页面式
+</span><span class="c1"></span>        <span class="nx">inserted</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="p">},</span>
+        <span class="c1">// 指令所在的模板被重新解析时
+</span><span class="c1"></span>        <span class="nx">update</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;指令number:&#39;</span> <span class="o">+</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>效果</p>
+<p><figure 
+	>
+	<a href="/post/eleven/8.gif" >
+		<img src="/post/eleven/8.gif"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="全局自定义指令">全局自定义指令</h3>
+<p>使用组件的directives选项注册局部自定义指令只能在该组件内使用，在别的组件使用会报错。</p>
+<p>接下来使用Vue.directive(id,definition)注册全局自定义指令</p>
+<p>感觉和过滤器一样😀</p>
+<h4 id="函数式-1">函数式</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="nx">Vue</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;multiply&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;指令number:&#39;</span> <span class="o">+</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="p">})</span>
+</code></pre></div><h4 id="对象式-1">对象式</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="nx">Vue</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;multiply&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="c1">// 指令与元素成功绑定
+</span><span class="c1"></span>        <span class="nx">bind</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;指令number:&#39;</span> <span class="o">+</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="c1">// 指令所在元素被插入页面式
+</span><span class="c1"></span>        <span class="nx">inserted</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="p">},</span>
+        <span class="c1">// 指令所在的模板被重新解析时
+</span><span class="c1"></span>        <span class="nx">update</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;指令number:&#39;</span> <span class="o">+</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div><h3 id="一些小坑">一些小坑</h3>
+<h4 id="命名">命名</h4>
+<p>在定义指令名字的时候如果很长一般以变量的习惯会以驼峰命名</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-multiplyXxxx</span><span class="s">=&#34;number&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div><p>但是以Vue内置指令如v-else-if，官方是不建议这么写的然后改一改</p>
+<p><figure 
+	>
+	<a href="/post/eleven/3.png" >
+		<img src="/post/eleven/3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>这时候就不能简写了,要写成下面这样</p>
+<p><figure 
+	>
+	<a href="/post/eleven/4.png" >
+		<img src="/post/eleven/4.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h4 id="this的问题">this的问题</h4>
+<p>我们输出看看指令函数中的this</p>
+<p>这是函数式中的</p>
+<p><figure 
+	>
+	<a href="/post/eleven/5.png" >
+		<img src="/post/eleven/5.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>这是对象式中的</p>
+<p><figure 
+	>
+	<a href="/post/eleven/6.png" >
+		<img src="/post/eleven/6.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><strong>可以看到在这里面的this并不是Vm实例，所以不要搞混了哦</strong>😉</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vue/">Vue</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/vue.png" loading="lazy" data-key="" data-hash="/post/vue.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue动态创建全局组件</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/two/3.png" loading="lazy" data-key="" data-hash="/post/two/3.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue项目中使用Tailwind CSS</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/one/6.png" loading="lazy" data-key="" data-hash="/post/one/6.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">搭建个人博客</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        <head>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+<body>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'y8mziDx1WK7ScGpENqrffBEO-gzGzoHsz',
+            appKey: 'HSM2AhRxPLvuebclx4491dsb'
+        })
+    </script>
+</body>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 MaGent Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#指令">指令</a></li>
+    <li><a href="#内置指令">内置指令</a></li>
+    <li><a href="#自定义指令">自定义指令</a>
+      <ol>
+        <li><a href="#局部自定义指令">局部自定义指令</a>
+          <ol>
+            <li><a href="#函数式">函数式</a></li>
+            <li><a href="#对象式">对象式</a></li>
+          </ol>
+        </li>
+        <li><a href="#全局自定义指令">全局自定义指令</a>
+          <ol>
+            <li><a href="#函数式-1">函数式</a></li>
+            <li><a href="#对象式-1">对象式</a></li>
+          </ol>
+        </li>
+        <li><a href="#一些小坑">一些小坑</a>
+          <ol>
+            <li><a href="#命名">命名</a></li>
+            <li><a href="#this的问题">this的问题</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
