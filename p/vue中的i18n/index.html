@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Vue动态创建全局组件 创建全局组件 这是我准备的组件目录结构 创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能 &amp;lt;template&amp;gt; &amp;lt;div'><title>Vue动态创建全局组件</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='vue-i18n'><title>Vue中的i18n</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue动态创建全局组件'>
-<meta property='og:description' content='Vue动态创建全局组件 创建全局组件 这是我准备的组件目录结构 创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能 &amp;lt;template&amp;gt; &amp;lt;div'>
-<meta property='og:url' content='https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue中的i18n'>
+<meta property='og:description' content='vue-i18n'>
+<meta property='og:url' content='https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2021-12-08T20:02:44&#43;08:00'/><meta property='article:modified_time' content='2021-12-08T20:02:44&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/vue.png' />
-<meta name="twitter:title" content="Vue动态创建全局组件">
-<meta name="twitter:description" content="Vue动态创建全局组件 创建全局组件 这是我准备的组件目录结构 创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能 &amp;lt;template&amp;gt; &amp;lt;div"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2021-12-12T15:18:25&#43;08:00'/><meta property='article:modified_time' content='2021-12-12T15:18:25&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/vue.png' />
+<meta name="twitter:title" content="Vue中的i18n">
+<meta name="twitter:description" content="vue-i18n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://loopyasa.github.io/post/vue.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/">
+            <a href="/p/vue%E4%B8%AD%E7%9A%84i18n/">
                 
-                    <img src="/post/vue.png" loading="lazy" alt="Featured image of post Vue动态创建全局组件" />
+                    <img src="/post/vue.png" loading="lazy" alt="Featured image of post Vue中的i18n" />
                 
             </a>
         </div>
@@ -84,9 +84,13 @@
     
 
     <h2 class="article-title">
-        <a href="/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/">Vue动态创建全局组件</a>
+        <a href="/p/vue%E4%B8%AD%E7%9A%84i18n/">Vue中的i18n</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        vue-i18n
+    </h3>
     
 
     
@@ -102,7 +106,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 08, 2021</time>
+                <time class="article-time--published">Dec 12, 2021</time>
             </div>
         
 
@@ -117,7 +121,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -127,15 +131,36 @@
 </header>
 
     <section class="article-content">
-    <h1 id="vue动态创建全局组件">Vue动态创建全局组件</h1>
-<h2 id="创建全局组件">创建全局组件</h2>
-<ul>
-<li>这是我准备的组件目录结构</li>
-</ul>
+    <h1 id="vue中使用vue-i18n">Vue中使用vue-i18n</h1>
+<h2 id="i18n">i18n</h2>
+<p>i18n（其来源是英文单词 internationalization的首末字符i和n，18为中间的字符数）是“国际化”的简称。</p>
+<h2 id="vue-i18n">vue-i18n</h2>
+<p>Vue I18n 是 Vue.js 的国际化插件。它可以轻松地将一些本地化功能集成到你的 Vue.js 应用程序中。</p>
+<h3 id="安装">安装</h3>
+<h4 id="html中引入">html中引入</h4>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/vue/dist/vue.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/vue-i18n/dist/vue-i18n.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></blockquote>
+<h4 id="npm">npm</h4>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">npm install vue-i18n
+</code></pre></div></blockquote>
+<h4 id="yarn">yarn</h4>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">yarn add vue-i18n
+</code></pre></div></blockquote>
+<h3 id="vue中使用">Vue中使用</h3>
+<h4 id="导入与使用">导入与使用</h4>
+<p>在main.js中导入并使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="kr">import</span> <span class="nx">VueI18n</span> <span class="nx">from</span> <span class="s1">&#39;vue-i18n&#39;</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VueI18n</span><span class="p">)</span>
+</code></pre></div><h4 id="创建语言包">创建语言包</h4>
+<p>路径为src/common/lang/语言名(如:zh.json)，路径可变看自己需求</p>
 <p><figure 
 	>
-	<a href="/post/six/2.png" >
-		<img src="/post/six/2.png"
+	<a href="/post/twelve/2.png" >
+		<img src="/post/twelve/2.png"
 			
 			
 			
@@ -144,102 +169,89 @@
 	</a>
 	
 </figure></p>
+<p>json文件中的内容就是相当于自己配置的可切换值的变量，如:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="c1">// em.json
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;test&#34;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="c1">// zh.json
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;测试&#34;</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="new-i18n并注入到到vue根实例">New i18n并注入到到Vue根实例</h4>
+<p>接下来简单的配置i18n，这里就演示中英双语啦</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="c1">// 配置i18n
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">i18n</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueI18n</span><span class="p">({</span>
+  <span class="nx">locale</span><span class="o">:</span> <span class="s1">&#39;zh-CN&#39;</span><span class="p">,</span> <span class="c1">// 语言标识
+</span><span class="c1"></span>  <span class="nx">messages</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;zh-CN&#39;</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./common/lang/zh.json&#39;</span><span class="p">),</span> <span class="c1">// 导入对应的语言包
+</span><span class="c1"></span>    <span class="s1">&#39;en-US&#39;</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./common/lang/em.json&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+</code></pre></div><p>别忘了注入到Vue</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
+  <span class="nx">i18n</span><span class="p">,</span>
+  <span class="nx">router</span><span class="p">,</span>
+  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span> <span class="nx">App</span> <span class="p">},</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;App/&gt;&#39;</span>
+<span class="p">})</span>
+</code></pre></div><h4 id="在组件中使用">在组件中使用</h4>
+<p>接下来我们到组件中测试</p>
+<p>这里我们主要使用两种方法</p>
 <ul>
 <li>
-<p>创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能</p>
+<p>使用v-text指令</p>
+<p>这是页面上一些相对比较固定不变的展示信息，比如导航栏切换语言</p>
+</li>
+<li>
+<p>使用插值语法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">{{</span> <span class="nx">$t</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span> <span class="p">}}</span> <span class="c1">// test为json文件中配置的名字
+</span></code></pre></div></li>
+</ul>
+<p>这里还要说一下切换的方式</p>
+<p><strong>this.$i18n.locale</strong> 这就是上面提到的语言标识，通过改变locale来切换对应的语言</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;hello&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span> <span class="nt">v-if</span><span class="s">=&#34;isShow&#34;</span><span class="p">&gt;{{</span> <span class="na">msg</span> <span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-text</span><span class="s">=&#34;$t(&#39;test&#39;)&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;{{</span> <span class="nx">$t</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span> <span class="p">}}&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;changeLang&#34;</span><span class="p">&gt;</span><span class="na">切换</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;HelloWorld&#39;</span><span class="p">,</span>
-  <span class="nx">data</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;Welcome to Your Vue.js App&#39;</span><span class="p">,</span>
-      <span class="nx">isShow</span><span class="o">:</span> <span class="kc">false</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div></li>
-<li>
-<p>创建HelloWorld_com.js</p>
-<ul>
-<li>
-<p>引入Vue与功能组件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="kr">import</span> <span class="nx">Hellow</span> <span class="nx">from</span> <span class="s1">&#39;./HelloWorld.vue&#39;</span>
-</code></pre></div></li>
-<li>
-<p>生成构造器</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="kr">const</span> <span class="nx">HellowConstructor</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">Hellow</span><span class="p">)</span>
-</code></pre></div></li>
-<li>
-<p>封装</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">showHello</span><span class="p">(</span> <span class="nx">_t</span><span class="p">,</span> <span class="nx">_time</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">_dom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HellowConstructor</span><span class="p">({</span>
-        <span class="nx">el</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">),</span> <span class="c1">// 生成DOM节点
-</span><span class="c1"></span>        <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="p">{</span>
-                <span class="nx">msg</span><span class="o">:</span> <span class="nx">_t</span><span class="p">,</span> <span class="c1">// 创建的功能组件中的msg
-</span><span class="c1"></span>                <span class="nx">isShow</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// 创建的功能组件中的isShow，控制显隐式
-</span><span class="c1"></span>            <span class="p">}</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;WorkspaceJsonTestCom&#39;</span><span class="p">,</span>
+
+    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="nx">lang</span><span class="o">:</span> <span class="s1">&#39;zh-CN&#39;</span><span class="p">,</span>
+            <span class="nx">test</span><span class="o">:</span> <span class="s1">&#39;测试&#39;</span>
+        <span class="p">};</span>
+    <span class="p">},</span>
+    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">changeLang</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">lang</span> <span class="o">===</span> <span class="s1">&#39;zh-CN&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">lang</span> <span class="o">=</span> <span class="s1">&#39;en-US&#39;</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$i18n</span><span class="p">.</span><span class="nx">locale</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">lang</span>
+            <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">lang</span> <span class="o">=</span> <span class="s1">&#39;zh-CN&#39;</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">$i18n</span><span class="p">.</span><span class="nx">locale</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">lang</span>
+            <span class="p">}</span>
         <span class="p">}</span>
-    <span class="p">})</span>
-
-    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">_dom</span><span class="p">.</span><span class="nx">$el</span><span class="p">)</span> <span class="c1">// 将创建的DOM挂载到body
-</span><span class="c1"></span>
-    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">_dom</span><span class="p">.</span><span class="nx">isShow</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">},</span> <span class="nx">_time</span><span class="p">)</span> <span class="c1">// 设置显隐式时间
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></div></li>
-<li>
-<p>全局组件，挂载到Vue的原型，并导出</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">helloReg</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">$showHello</span> <span class="o">=</span> <span class="nx">showHello</span>
-<span class="p">}</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">helloReg</span>
-</code></pre></div></li>
-<li>
-<p>在main.js中引入并全局使用</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">showHellow</span> <span class="nx">from</span> <span class="s1">&#39;./components/HelloWorld_com/HelloWorld_com&#39;</span>
-
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">showHellow</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
-</li>
-</ul>
-<h2 id="使用全局组件">使用全局组件</h2>
-<ul>
-<li>
-<p>我是在app中直接使用 (因为已经绑在Vue原型上了，所以直接this.$XXX传入需要的参数使用)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;app&#34;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">button</span> <span class="err">@</span><span class="nx">click</span><span class="o">=</span><span class="s2">&#34;showHello&#34;</span><span class="o">&gt;</span><span class="nx">点击</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-    <span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">view</span><span class="o">/&gt;</span>
-  <span class="o">&lt;</span><span class="err">/div&gt;</span>
-<span class="o">&lt;</span><span class="err">/template&gt;</span>
-
-<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;App&#39;</span><span class="p">,</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">showHello</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">$showHello</span><span class="p">(</span><span class="s1">&#39;hello,&#39;</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
     <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-</code></pre></div></li>
-<li>
-<p>效果图</p>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h4 id="效果">效果</h4>
 <p><figure 
 	>
-	<a href="/post/six/3.gif" >
-		<img src="/post/six/3.gif"
+	<a href="/post/twelve/3.gif" >
+		<img src="/post/twelve/3.gif"
 			
 			
 			
@@ -248,8 +260,6 @@
 	</a>
 	
 </figure></p>
-</li>
-</ul>
 
 </section>
 
@@ -290,24 +300,6 @@
                 
                     
 <article class="has-image">
-    <a href="/p/vue%E4%B8%AD%E7%9A%84i18n/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/vue.png" loading="lazy" data-key="" data-hash="/post/vue.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Vue中的i18n</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
     <a href="/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/">
         
         
@@ -320,6 +312,24 @@
 
         <div class="article-details">
             <h2 class="article-title">Vue自定义指令</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/vue.png" loading="lazy" data-key="" data-hash="/post/vue.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue动态创建全局组件</h2>
         </div>
     </a>
 </article>
@@ -515,8 +525,27 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#创建全局组件">创建全局组件</a></li>
-    <li><a href="#使用全局组件">使用全局组件</a></li>
+    <li><a href="#i18n">i18n</a></li>
+    <li><a href="#vue-i18n">vue-i18n</a>
+      <ol>
+        <li><a href="#安装">安装</a>
+          <ol>
+            <li><a href="#html中引入">html中引入</a></li>
+            <li><a href="#npm">npm</a></li>
+            <li><a href="#yarn">yarn</a></li>
+          </ol>
+        </li>
+        <li><a href="#vue中使用">Vue中使用</a>
+          <ol>
+            <li><a href="#导入与使用">导入与使用</a></li>
+            <li><a href="#创建语言包">创建语言包</a></li>
+            <li><a href="#new-i18n并注入到到vue根实例">New i18n并注入到到Vue根实例</a></li>
+            <li><a href="#在组件中使用">在组件中使用</a></li>
+            <li><a href="#效果">效果</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
   </ol>
 </nav>
                 </div>
