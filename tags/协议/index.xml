@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>协议 on MaGent Blog</title>
+    <link>https://loopyasa.github.io/tags/%E5%8D%8F%E8%AE%AE/</link>
+    <description>Recent content in 协议 on MaGent Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Dec 2021 13:00:05 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TCP三次握手和四次挥手</title>
+      <link>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</link>
+      <pubDate>Mon, 13 Dec 2021 13:00:05 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</guid>
+      <description>TCP三次握手和四次挥手 TCP连接 建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客</description>
+    </item>
+    
+  </channel>
+</rss>

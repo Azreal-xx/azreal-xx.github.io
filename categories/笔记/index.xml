@@ -6,7 +6,34 @@
     <description>Recent content in 笔记 on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Dec 2021 12:30:07 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 10:28:11 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>回流和重绘</title>
+      <link>https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</link>
+      <pubDate>Tue, 14 Dec 2021 10:28:11 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</guid>
+      <description>回流和重绘 简介 在HTML中，每个元素都可以理解成一个盒子，在浏览器解析过程中，会涉及到回流与重绘。 回流: 布局引擎会根据各种样式计算每个盒子在</description>
+    </item>
+    
+    <item>
+      <title>TCP三次握手和四次挥手</title>
+      <link>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</link>
+      <pubDate>Mon, 13 Dec 2021 13:00:05 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</guid>
+      <description>TCP三次握手和四次挥手 TCP连接 建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客</description>
+    </item>
+    
+    <item>
+      <title>var 、 let 、 const</title>
+      <link>https://loopyasa.github.io/p/var-let-const/</link>
+      <pubDate>Sun, 12 Dec 2021 19:45:26 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/var-let-const/</guid>
+      <description>var 、 let 、 const的区别 var 在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器</description>
+    </item>
+    
     <item>
       <title>JS中的this</title>
       <link>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</link>

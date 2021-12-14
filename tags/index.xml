@@ -6,7 +6,34 @@
     <description>Recent content in Tags on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Dec 2021 17:16:32 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 10:28:11 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端</title>
+      <link>https://loopyasa.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Tue, 14 Dec 2021 10:28:11 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>协议</title>
+      <link>https://loopyasa.github.io/tags/%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Mon, 13 Dec 2021 13:00:05 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/tags/%E5%8D%8F%E8%AE%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JS</title>
+      <link>https://loopyasa.github.io/tags/js/</link>
+      <pubDate>Sun, 12 Dec 2021 19:45:26 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>React</title>
       <link>https://loopyasa.github.io/tags/react/</link>
@@ -22,15 +49,6 @@
       <pubDate>Sun, 12 Dec 2021 15:18:25 +0800</pubDate>
       
       <guid>https://loopyasa.github.io/tags/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS</title>
-      <link>https://loopyasa.github.io/tags/js/</link>
-      <pubDate>Fri, 10 Dec 2021 12:30:07 +0800</pubDate>
-      
-      <guid>https://loopyasa.github.io/tags/js/</guid>
       <description></description>
     </item>
     

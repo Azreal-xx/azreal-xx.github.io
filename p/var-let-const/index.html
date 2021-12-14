@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='var 、 let 、 const的区别 var 在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器'><title>var 、 let 、 const</title>
+
+<link rel='canonical' href='https://loopyasa.github.io/p/var-let-const/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='var 、 let 、 const'>
+<meta property='og:description' content='var 、 let 、 const的区别 var 在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器'>
+<meta property='og:url' content='https://loopyasa.github.io/p/var-let-const/'>
+<meta property='og:site_name' content='MaGent Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='JS' /><meta property='article:published_time' content='2021-12-12T19:45:26&#43;08:00'/><meta property='article:modified_time' content='2021-12-12T19:45:26&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/fourteen/1.png' />
+<meta name="twitter:title" content="var 、 let 、 const">
+<meta name="twitter:description" content="var 、 let 、 const的区别 var 在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/fourteen/1.png' />
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/var-let-const/">
+                
+                    <img src="/post/fourteen/1.png" loading="lazy" alt="Featured image of post var 、 let 、 const" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
+                笔记
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/var-let-const/">var 、 let 、 const</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 12, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 3 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="var--let--const的区别">var 、 let 、 const的区别</h1>
+<h2 id="var">var</h2>
+<p>在ES5中，顶层对象的属性和全局变量是等价的，用<code>var</code>声明的变量既是全局变量，也是顶层变量</p>
+<p>注意：顶层对象，在浏览器环境指的是<code>window</code>对象，在 <code>Node</code> 指的是<code>global</code>对象</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 10
+</span></code></pre></div><p>使用<code>var</code>声明的变量存在变量提升的情况</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// undefined
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div><p>在编译阶段，编译器会将其变成以下执行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div><p>使用<code>var</code>，我们能够对一个变量进行多次声明，后面声明的变量会覆盖前面的变量声明</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span> 
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 30
+</span></code></pre></div><p>在函数中使用使用<code>var</code>声明变量时候，该变量是局部的</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="kd">function</span> <span class="nx">change</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="p">}</span>
+<span class="nx">change</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 20 
+</span></code></pre></div><p>而如果在函数内不使用<code>var</code>，该变量是全局的</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="kd">function</span> <span class="nx">change</span><span class="p">(){</span>
+   <span class="nx">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="p">}</span>
+<span class="nx">change</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 30 
+</span></code></pre></div><h2 id="let">let</h2>
+<p><code>let</code>是<code>ES6</code>新增的命令，用来声明变量</p>
+<p>用法类似于<code>var</code>，但是所声明的变量，只在<code>let</code>命令所在的代码块内有效</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// ReferenceError: a is not defined.
+</span></code></pre></div><p>不存在变量提升</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="c1">// 报错ReferenceError
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div><p>这表示在声明它之前，变量<code>a</code>是不存在的，这时如果用到它，就会抛出一个错误</p>
+<p>只要块级作用域内存在<code>let</code>命令，这个区域就不再受外部影响</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span> <span class="c1">// ReferenceError
+</span><span class="c1"></span>    <span class="kd">let</span> <span class="nx">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>使用<code>let</code>声明变量前，该变量都不可用，也就是大家常说的“暂时性死区”</p>
+<p>最后，<code>let</code>不允许在相同作用域中重复声明</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="c1">// Uncaught SyntaxError: Identifier &#39;a&#39; has already been declared
+</span></code></pre></div><p>注意的是相同作用域，下面这种情况是不会报错的</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="p">}</span>
+</code></pre></div><p>因此，我们不能在函数内部重新声明参数</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">func</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">arg</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">func</span><span class="p">()</span>
+<span class="c1">// Uncaught SyntaxError: Identifier &#39;arg&#39; has already been declared
+</span></code></pre></div><h2 id="const">const</h2>
+<p><code>const</code>声明一个只读的常量，一旦声明，常量的值就不能改变</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">// TypeError: Assignment to constant variable.
+</span></code></pre></div><p>这意味着，<code>const</code>一旦声明变量，就必须立即初始化，不能留到以后赋值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">a</span><span class="p">;</span>
+<span class="c1">// SyntaxError: Missing initializer in const declaration
+</span></code></pre></div><p>如果之前用<code>var</code>或<code>let</code>声明过变量，再用<code>const</code>声明同样会报错</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="c1">// 都会报错
+</span></code></pre></div><p><code>const</code>实际上保证的并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动</p>
+<p>对于简单类型的数据，值就保存在变量指向的那个内存地址，因此等同于常量</p>
+<p>对于复杂类型的数据，变量指向的内存地址，保存的只是一个指向实际数据的指针，<code>const</code>只能保证这个指针是固定的，并不能确保改变量的结构不变</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="c1">// 为 foo 添加一个属性，可以成功
+</span><span class="c1"></span><span class="nx">foo</span><span class="p">.</span><span class="nx">prop</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+<span class="nx">foo</span><span class="p">.</span><span class="nx">prop</span> <span class="c1">// 123
+</span><span class="c1"></span>
+<span class="c1">// 将 foo 指向另一个对象，就会报错
+</span><span class="c1"></span><span class="nx">foo</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">// TypeError: &#34;foo&#34; is read-only
+</span></code></pre></div><p>其它情况，<code>const</code>与<code>let</code>一致</p>
+<h2 id="区别">区别</h2>
+<h3 id="变量提升"><strong>变量提升</strong></h3>
+<blockquote>
+<p>var <code>声明的变量存在变量提升，即变量可以在声明之前调用，值为</code>undefined</p>
+<p><code>let</code>和<code>const</code>不存在变量提升，即它们所声明的变量一定要在声明后使用，否则报错</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// var
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>  <span class="c1">// undefined
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1">// let 
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>  <span class="c1">// Cannot access &#39;b&#39; before initialization
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1">// const
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>  <span class="c1">// Cannot access &#39;c&#39; before initialization
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div><h3 id="暂时性死区">暂时性死区</h3>
+<p><code>var</code>不存在暂时性死区</p>
+<p><code>let</code>和<code>const</code>存在暂时性死区，只有等到声明变量的那一行代码出现，才可以获取和使用该变量</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// var
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>  <span class="c1">// undefined
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1">// let
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>  <span class="c1">// Cannot access &#39;b&#39; before initialization
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1">// const
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>  <span class="c1">// Cannot access &#39;c&#39; before initialization
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div><h3 id="块级作用域">块级作用域</h3>
+<p><code>var</code>不存在块级作用域</p>
+<p><code>let</code>和<code>const</code>存在块级作用域</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// var
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>  <span class="c1">// 20
+</span><span class="c1"></span>
+<span class="c1">// let
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>  <span class="c1">// Uncaught ReferenceError: b is not defined
+</span><span class="c1"></span>
+<span class="c1">// const
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>  <span class="c1">// Uncaught ReferenceError: c is not defined
+</span></code></pre></div><h3 id="重复声明">重复声明</h3>
+<p><code>var</code>允许重复声明变量</p>
+<p><code>let</code>和<code>const</code>在同一作用域不允许重复声明变量</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// var
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">// 20
+</span><span class="c1"></span>
+<span class="c1">// let
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">// Identifier &#39;b&#39; has already been declared
+</span><span class="c1"></span>
+<span class="c1">// const
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">// Identifier &#39;c&#39; has already been declared
+</span></code></pre></div><h3 id="修改变量的声明">修改变量的声明</h3>
+<p><code>var</code>和<code>let</code>可以</p>
+<p><code>const</code>声明一个只读的常量。一旦声明，常量的值就不能改变</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// var
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>  <span class="c1">// 20
+</span><span class="c1"></span>
+<span class="c1">//let
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>  <span class="c1">// 20
+</span><span class="c1"></span>
+<span class="c1">// const
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="c1">// Uncaught TypeError: Assignment to constant variable
+</span></code></pre></div><h2 id="使用">使用</h2>
+<p>能用<code>const</code>的情况尽量使用<code>const</code>，其他情况下大多数使用<code>let</code>，避免使用<code>var</code></p>
+<p><a class="link" href="https://github.com/febobo/web-interview/issues/34"  target="_blank" rel="noopener"
+    >参考文献</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/js/">JS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相关文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/js%E4%B8%AD%E7%9A%84this/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/nine/1.png" loading="lazy" data-key="" data-hash="/post/nine/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">JS中的this</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/cookie-localstorage-sessionstorage/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/eight/1.png" loading="lazy" data-key="" data-hash="/post/eight/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cookie  localStorage  sessionStorage</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/sixteen/1.png" loading="lazy" data-key="" data-hash="/post/sixteen/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">回流和重绘</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/fifteen/1.png" loading="lazy" data-key="" data-hash="/post/fifteen/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">TCP三次握手和四次挥手</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/seven/1.png" loading="lazy" data-key="" data-hash="/post/seven/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue中的Ajax</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        <head>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+<body>
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'y8mziDx1WK7ScGpENqrffBEO-gzGzoHsz',
+            appKey: 'HSM2AhRxPLvuebclx4491dsb'
+        })
+    </script>
+</body>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 MaGent Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#var">var</a></li>
+    <li><a href="#let">let</a></li>
+    <li><a href="#const">const</a></li>
+    <li><a href="#区别">区别</a>
+      <ol>
+        <li><a href="#变量提升"><strong>变量提升</strong></a></li>
+        <li><a href="#暂时性死区">暂时性死区</a></li>
+        <li><a href="#块级作用域">块级作用域</a></li>
+        <li><a href="#重复声明">重复声明</a></li>
+        <li><a href="#修改变量的声明">修改变量的声明</a></li>
+      </ol>
+    </li>
+    <li><a href="#使用">使用</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

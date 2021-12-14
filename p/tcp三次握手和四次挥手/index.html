@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Vue中的ajax应该放在哪个钩子里'><title>Vue中的Ajax</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='TCP三次握手和四次挥手 TCP连接 建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客'><title>TCP三次握手和四次挥手</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue中的Ajax'>
-<meta property='og:description' content='Vue中的ajax应该放在哪个钩子里'>
-<meta property='og:url' content='https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='TCP三次握手和四次挥手'>
+<meta property='og:description' content='TCP三次握手和四次挥手 TCP连接 建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客'>
+<meta property='og:url' content='https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2021-12-09T10:57:56&#43;08:00'/><meta property='article:modified_time' content='2021-12-09T10:57:56&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/seven/1.png' />
-<meta name="twitter:title" content="Vue中的Ajax">
-<meta name="twitter:description" content="Vue中的ajax应该放在哪个钩子里"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://loopyasa.github.io/post/seven/1.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='协议' /><meta property='article:published_time' content='2021-12-13T13:00:05&#43;08:00'/><meta property='article:modified_time' content='2021-12-13T13:00:05&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/fifteen/1.png' />
+<meta name="twitter:title" content="TCP三次握手和四次挥手">
+<meta name="twitter:description" content="TCP三次握手和四次挥手 TCP连接 建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/fifteen/1.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
+            <a href="/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
                 
-                    <img src="/post/seven/1.png" loading="lazy" alt="Featured image of post Vue中的Ajax" />
+                    <img src="/post/fifteen/1.png" loading="lazy" alt="Featured image of post TCP三次握手和四次挥手" />
                 
             </a>
         </div>
@@ -84,13 +84,9 @@
     
 
     <h2 class="article-title">
-        <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">Vue中的Ajax</a>
+        <a href="/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">TCP三次握手和四次挥手</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        Vue中的ajax应该放在哪个钩子里
-    </h3>
     
 
     
@@ -106,7 +102,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 09, 2021</time>
+                <time class="article-time--published">Dec 13, 2021</time>
             </div>
         
 
@@ -121,7 +117,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -131,41 +127,58 @@
 </header>
 
     <section class="article-content">
-    <h1 id="vue中的ajax应该在放在哪个钩子函数中">Vue中的Ajax应该在放在哪个钩子函数中</h1>
-<h2 id="前言">前言</h2>
-<p>网上看了许多的相关博客，问题范围较广具体很多都是要看业务需求。异步函数并不会阻塞vue生命周期整个进程，所以在哪个阶段请求都可以，比如也有放在销毁之前的、缓存路由需要在activated做异步请求。但这个问题主要一般存在于created和mounted之间。</p>
-<h2 id="created--mounted">created &amp; mounted</h2>
-<ul>
-<li>
-<p><strong>created</strong></p>
-<blockquote>
-<p>初始化与依赖注入相关的操作，会遍历传入methods的选项，初始化选项数据，从$options获取数据选项(vm.$options.data)，给数据添加‘观察器’对象并创建观察器，定义getter、setter存储器属性。在实例创建之后被调用，该阶段可以访问data，使用watcher、events、methods，也就是说 数据观测(data observer) 和event/watcher 事件配置 已完成。但是此时dom还没有被挂载。该阶段允许执行http请求操作。</p>
-</blockquote>
-</li>
-<li>
-<p><strong>mounted</strong></p>
-<blockquote>
-<p>在挂载完成之后被调用，执行render函数生成虚拟dom，创建真实dom替换虚拟dom，并挂载到实例。可以操作dom，比如事件监听。</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p><strong>对比可以看出created是最早可以访问data的，但是在created阶段并不会生成dom，所以这个阶段无法操作dom。</strong></p>
-</blockquote>
-<h2 id="心得">心得</h2>
-<p>对于一个两个选择都可以的，答案自然在使用者心里。我的体会是:</p>
-<ul>
-<li>
-<blockquote>
-<p>如果是一开始进入一个页面需要显示的数据放在created里，如果是后续和页面交互需要的请求放在mounted里。<strong>简单理解就是(数据操作放created   dom节点操作放mounted)</strong></p>
-</blockquote>
-</li>
-<li>
-<blockquote>
-<p>如果考虑到用户体验方面的影响，希望用户今早感知页面已加载，减少空白页面时间，建议就放在created阶段了，然后再处理会出现null、undefined这种情况就好。毕竟越早获取数据，在mounted实例挂载的时候渲染也就越及时。</p>
-</blockquote>
-</li>
-</ul>
+    <h1 id="tcp三次握手和四次挥手">TCP三次握手和四次挥手</h1>
+<h2 id="tcp连接">TCP连接</h2>
+<p>建立一个TCP连接时，需要<code>客户端</code>和服务端总共发送3个包以确认连接的建立。在<code>socket编程</code>中，这一过程由客户端执行connect来触发。在TCP/IP协议中,TCP协议提供可靠的连接服务,采用三次握手建立一个连接.</p>
+<h2 id="三次握手">三次握手</h2>
+<p>TCP报文里面有SYN、ACK和FIN等标识。如果设置1就是开启这些标识，如果设置0就是关闭这些标识。</p>
+<p>这里在视频里一张图片可以很好理解</p>
+<p><figure 
+	>
+	<a href="/post/fifteen/2.png" >
+		<img src="/post/fifteen/2.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h2 id="四次挥手">四次挥手</h2>
+<p>客户端和服务端都能主动发起关闭请求，这里以客户端发起。</p>
+<p><figure 
+	>
+	<a href="/post/fifteen/3.png" >
+		<img src="/post/fifteen/3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>附上视频原址</p>
+
+
+
+
+
+
+    
+
+
+<div class="video-wrapper">
+    <iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;high_quality=1&amp;page=1&bvid=BV18h41187Ep"
+            scrolling="no"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+    >
+    </iframe>
+</div>
+
 
 </section>
 
@@ -174,7 +187,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/vue/">Vue</a>
+            <a href="/tags/%E5%8D%8F%E8%AE%AE/">协议</a>
         
     </section>
 
@@ -206,24 +219,6 @@
                 
                     
 <article class="has-image">
-    <a href="/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/four/1.png" loading="lazy" data-key="" data-hash="/post/four/1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Vue生命周期执行流程</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
     <a href="/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/">
         
         
@@ -236,24 +231,6 @@
 
         <div class="article-details">
             <h2 class="article-title">回流和重绘</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/fifteen/1.png" loading="lazy" data-key="" data-hash="/post/fifteen/1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">TCP三次握手和四次挥手</h2>
         </div>
     </a>
 </article>
@@ -290,6 +267,42 @@
 
         <div class="article-details">
             <h2 class="article-title">JS中的this</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/cookie-localstorage-sessionstorage/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/eight/1.png" loading="lazy" data-key="" data-hash="/post/eight/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cookie  localStorage  sessionStorage</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/seven/1.png" loading="lazy" data-key="" data-hash="/post/seven/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue中的Ajax</h2>
         </div>
     </a>
 </article>
@@ -431,9 +444,9 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#created--mounted">created &amp; mounted</a></li>
-    <li><a href="#心得">心得</a></li>
+    <li><a href="#tcp连接">TCP连接</a></li>
+    <li><a href="#三次握手">三次握手</a></li>
+    <li><a href="#四次挥手">四次挥手</a></li>
   </ol>
 </nav>
                 </div>
