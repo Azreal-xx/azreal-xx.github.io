@@ -6,7 +6,16 @@
     <description>Recent content in 博客 on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Dec 2021 17:16:32 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Dec 2021 20:20:28 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue中使用Mixins</title>
+      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</link>
+      <pubDate>Fri, 31 Dec 2021 20:20:28 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</guid>
+      <description>Vue中使用Mixins 基础概念 混入 (mixins)： 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用</description>
+    </item>
+    
     <item>
       <title>React中的i18n</title>
       <link>https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</link>

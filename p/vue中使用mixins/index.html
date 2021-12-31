@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='react-i18next'><title>React中的i18n</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Mixins的使用'><title>Vue中使用Mixins</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='React中的i18n'>
-<meta property='og:description' content='react-i18next'>
-<meta property='og:url' content='https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Vue中使用Mixins'>
+<meta property='og:description' content='Mixins的使用'>
+<meta property='og:url' content='https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='React' /><meta property='article:published_time' content='2021-12-12T17:16:32&#43;08:00'/><meta property='article:modified_time' content='2021-12-12T17:16:32&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/react.png' />
-<meta name="twitter:title" content="React中的i18n">
-<meta name="twitter:description" content="react-i18next"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://loopyasa.github.io/post/react.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2021-12-31T20:20:28&#43;08:00'/><meta property='article:modified_time' content='2021-12-31T20:20:28&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/vue.png' />
+<meta name="twitter:title" content="Vue中使用Mixins">
+<meta name="twitter:description" content="Mixins的使用"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/vue.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/react%E4%B8%AD%E7%9A%84i18n/">
+            <a href="/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/">
                 
-                    <img src="/post/react.png" loading="lazy" alt="Featured image of post React中的i18n" />
+                    <img src="/post/vue.png" loading="lazy" alt="Featured image of post Vue中使用Mixins" />
                 
             </a>
         </div>
@@ -84,12 +84,12 @@
     
 
     <h2 class="article-title">
-        <a href="/p/react%E4%B8%AD%E7%9A%84i18n/">React中的i18n</a>
+        <a href="/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/">Vue中使用Mixins</a>
     </h2>
 
     
     <h3 class="article-subtitle">
-        react-i18next
+        Mixins的使用
     </h3>
     
 
@@ -106,7 +106,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 12, 2021</time>
+                <time class="article-time--published">Dec 31, 2021</time>
             </div>
         
 
@@ -121,7 +121,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -131,106 +131,17 @@
 </header>
 
     <section class="article-content">
-    <h1 id="react中使用react-i18next">React中使用react-i18next</h1>
-<h2 id="i18n">i18n</h2>
-<p>i18n（其来源是英文单词 internationalization的首末字符i和n，18为中间的字符数）是“国际化”的简称。</p>
-<h2 id="react-i18next">react-i18next</h2>
-<h3 id="安装">安装</h3>
+    <h1 id="vue中使用mixins">Vue中使用Mixins</h1>
+<h2 id="基础概念">基础概念</h2>
+<p><strong>混入 (mixins)</strong>： 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。</p>
+<h2 id="使用">使用</h2>
 <ul>
-<li>
-<p>npm</p>
-<blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">npm install eact-i18next i18next
-</code></pre></div></blockquote>
-</li>
-<li>
-<p>yarn</p>
-<blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">yarn add react-i18next i18next 
-</code></pre></div></blockquote>
-</li>
+<li>文件结构</li>
 </ul>
-<h3 id="使用">使用</h3>
-<p>在src下创建i18n.js并配置</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">i18n</span> <span class="nx">from</span> <span class="s2">&#34;i18next&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">initReactI18next</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-i18next&#34;</span><span class="p">;</span>
-
-<span class="kr">const</span> <span class="nx">resources</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="c1">// 语言已经对应的变量名已经语言相对的值，这里是测试使用，需要的可以把这些键值提出保存为json再导入
-</span><span class="c1"></span>    <span class="nx">en</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">translation</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&#34;test&#34;</span><span class="o">:</span> <span class="s2">&#34;test&#34;</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">zh_CN</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">translation</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">&#34;test&#34;</span><span class="o">:</span> <span class="s2">&#34;测试&#34;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">i18n</span>
-    <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">initReactI18next</span><span class="p">)</span> 
-    <span class="p">.</span><span class="nx">init</span><span class="p">({</span>
-        <span class="nx">resources</span><span class="p">,</span>
-        <span class="nx">fallbackLng</span><span class="o">:</span> <span class="s1">&#39;zh_CN&#39;</span><span class="p">,</span>
-        <span class="nx">lng</span><span class="o">:</span> <span class="s1">&#39;zh_CN&#39;</span><span class="p">,</span> <span class="c1">// 默认语言
-</span><span class="c1"></span>
-        <span class="nx">keySeparator</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> 
-
-        <span class="nx">interpolation</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">escapeValue</span><span class="o">:</span> <span class="kc">false</span> 
-        <span class="p">}</span>
-    <span class="p">});</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">i18n</span><span class="p">;</span>
-</code></pre></div><p>在index.js中引入i18n</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">lazy</span><span class="p">,</span> <span class="nx">Suspense</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="s1">&#39;./i18n&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="s1">&#39;./index.css&#39;</span><span class="p">;</span>
-
-<span class="kr">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="nx">lazy</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./App.js&#39;</span><span class="p">))</span>
-
-<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-  <span class="o">&lt;</span><span class="nx">Suspense</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="o">&lt;</span><span class="err">/div&gt;}&gt;</span>
-    <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span>
-  <span class="o">&lt;</span><span class="err">/Suspense&gt;,</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div><p>在App.js中测试</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;./App.css&#39;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">useTranslation</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-i18next&#39;</span><span class="p">;</span>
-
-<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="p">{</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useTranslation</span><span class="p">();</span>
-
-    <span class="c1">// 修改i18n中的默认语言
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">change</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">i18n</span><span class="p">.</span><span class="nx">changeLanguage</span><span class="p">(</span><span class="nx">i18n</span><span class="p">.</span><span class="nx">language</span> <span class="o">===</span> <span class="s1">&#39;en&#39;</span> <span class="o">?</span> <span class="s1">&#39;zh_CN&#39;</span> <span class="o">:</span> <span class="s1">&#39;en&#39;</span><span class="p">)</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">header</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App-header&#34;</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
-          <span class="p">{</span><span class="nx">t</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">)}</span>
-        <span class="o">&lt;</span><span class="err">/p&gt;</span>
-        <span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;&lt;</span><span class="err">/br&gt;</span>
-        <span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;&lt;</span><span class="err">/br&gt;</span>
-        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span> <span class="nx">change</span> <span class="p">}</span><span class="o">&gt;</span><span class="nx">切换</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-      <span class="o">&lt;</span><span class="err">/header&gt;</span>
-    <span class="o">&lt;</span><span class="err">/div&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div><p>这里使用的是</p>
-<pre tabindex="0"><code>{t(&quot;test&quot;)} // test是配置在语言里的键  以展示对应的值
-</code></pre><h3 id="效果">效果</h3>
 <p><figure 
 	>
-	<a href="/post/thirteen/2.gif" >
-		<img src="/post/thirteen/2.gif"
+	<a href="/post/seventeen/2.png" >
+		<img src="/post/seventeen/2.png"
 			
 			
 			
@@ -239,6 +150,92 @@
 	</a>
 	
 </figure></p>
+<ul>
+<li>
+<p>在songlist.js(自定义名字就好)中写入需要复用的部分并导出即可</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">songlist</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="nx">isShowing</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">load</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">+=</span> <span class="mi">2</span>
+        <span class="p">},</span>
+        <span class="nx">toMv</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+                <span class="nx">path</span><span class="o">:</span> <span class="sb">`/Playmv`</span><span class="p">,</span>
+                <span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="nx">id</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">}</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>我这里就简单的导出了两个需要的方法，这里可以写很多，比如需要复用的生命周期钩子</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{};</span>
+  <span class="p">},</span>
+  <span class="nx">methods</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="nx">beforeCreate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;mixins  beforeCreate&#34;</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;mixins  created&#34;</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;mixins  mounted&#34;</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">beforeDestroy</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;mixins  beforeDestroy&#34;</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">destroyed</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;mixins  destroyed&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>在需要的组件中使用，在该组件中导入上诉写好的js文件并使用mixins</p>
+</li>
+</ul>
+<p><figure 
+	>
+	<a href="/post/seventeen/3.png" >
+		<img src="/post/seventeen/3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h2 id="注意事项">注意事项</h2>
+<ul>
+<li>与vuex的区别</li>
+</ul>
+<blockquote>
+<p>vuex：用来做状态管理的，里面定义的变量在每个组件中均可以使用和修改，在任一组件中修改此变量的值之后，其他组件中此变量的值也会随之修改。</p>
+<p>Mixins：可以定义共用的变量，在每个组件中使用，引入组件中之后，各个变量是相互独立的，值的修改在组件中不会相互影响。方法和参数在各组件中不共享</p>
+</blockquote>
+<ul>
+<li>与公共组件的区别</li>
+</ul>
+<blockquote>
+<p>组件：在父组件中引入组件，相当于在父组件中给出一片独立的空间供子组件使用，然后根据props来传值，但本质上两者是相对独立的。</p>
+<p>Mixins：则是在引入组件之后与组件中的对象和方法进行合并，相当于扩展了父组件的对象与方法，可以理解为形成了一个新的组件。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>值为函数的选项，如created,mounted等，就会被合并调用，Mixins混合对象里的钩子函数在组件里的钩子函数之前调用</p>
+</blockquote>
+<blockquote>
+<p>值为对象的选项，如methods,components等，选项会被合并，键冲突的组件会覆盖混入对象的</p>
+</blockquote>
+<p><a class="link" href="https://www.cnblogs.com/ygyy/p/14270969.html"  target="_blank" rel="noopener"
+    >参考文章</a></p>
 
 </section>
 
@@ -247,7 +244,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/react/">React</a>
+            <a href="/tags/vue/">Vue</a>
         
     </section>
 
@@ -276,24 +273,6 @@
         <h2 class="section-title">相关文章</h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
-                
-                    
-<article class="has-image">
-    <a href="/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/vue.png" loading="lazy" data-key="" data-hash="/post/vue.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Vue中使用Mixins</h2>
-        </div>
-    </a>
-</article>
                 
                     
 <article class="has-image">
@@ -363,6 +342,24 @@
 
         <div class="article-details">
             <h2 class="article-title">Vue项目中使用Tailwind CSS</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/react%E4%B8%AD%E7%9A%84i18n/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/react.png" loading="lazy" data-key="" data-hash="/post/react.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">React中的i18n</h2>
         </div>
     </a>
 </article>
@@ -504,14 +501,9 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#i18n">i18n</a></li>
-    <li><a href="#react-i18next">react-i18next</a>
-      <ol>
-        <li><a href="#安装">安装</a></li>
-        <li><a href="#使用">使用</a></li>
-        <li><a href="#效果">效果</a></li>
-      </ol>
-    </li>
+    <li><a href="#基础概念">基础概念</a></li>
+    <li><a href="#使用">使用</a></li>
+    <li><a href="#注意事项">注意事项</a></li>
   </ol>
 </nav>
                 </div>

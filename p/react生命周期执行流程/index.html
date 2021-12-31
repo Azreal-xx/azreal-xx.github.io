@@ -121,7 +121,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -133,6 +133,79 @@
     <section class="article-content">
     <h1 id="react生命周期执行流程">React生命周期执行流程</h1>
 <h2 id="旧版本生命周期">旧版本生命周期</h2>
+<ul>
+<li>
+<p>constructor()</p>
+<blockquote>
+<p>constructor()中完成了React数据的初始化，它接受两个参数：props和context，当想在函数内部使用这两个参数时，需使用super()传入这两个参数。
+注意：只要使用了constructor()就必须写super(),否则会导致this指向错误。</p>
+</blockquote>
+</li>
+<li>
+<p>componentWillMount()</p>
+</li>
+</ul>
+<blockquote>
+<p>componentWillMount()一般用的比较少，它更多的是在服务端渲染时使用。它代表的过程是组件已经经历了constructor()初始化数据后，但是还未渲染DOM时。</p>
+</blockquote>
+<ul>
+<li>componentDidMount()</li>
+</ul>
+<blockquote>
+<p>组件第一次渲染完成，此时dom节点已经生成，可以在这里调用ajax请求，返回数据setState后组件会重新渲染</p>
+</blockquote>
+<ul>
+<li>componentWillUnmount ()</li>
+</ul>
+<blockquote>
+<p>在此处完成组件的卸载和数据的销毁。</p>
+</blockquote>
+<ul>
+<li>
+<p>componentWillReceiveProps (nextProps)</p>
+<blockquote>
+<p>在接受父组件改变后的props需要重新渲染组件时用到的比较多。接受一个参数nextProps，通过对比nextProps和this.props，将nextProps的state为当前组件的state，从而重新渲染组件</p>
+</blockquote>
+</li>
+<li>
+<p>shouldComponentUpdate(nextProps,nextState)</p>
+</li>
+</ul>
+<blockquote>
+<p>主要用于性能优化(部分更新)，唯一用于控制组件重新渲染的生命周期，由于在react中，setState以后，state发生变化，组件会进入重新渲染的流程，在这里return false可以阻止组件的更新。唯一用于控制组件重新渲染的生命周期，由于在react中，setState以后，state发生变化，组件会进入重新渲染的流程，在这里return false可以阻止组件的更新。</p>
+</blockquote>
+<ul>
+<li>componentWillUpdate (nextProps,nextState)</li>
+</ul>
+<blockquote>
+<p>shouldComponentUpdate返回true以后，组件进入重新渲染的流程，进入componentWillUpdate,这里同样可以拿到nextProps和nextState。</p>
+</blockquote>
+<ul>
+<li>componentDidUpdate(prevProps,prevState)</li>
+</ul>
+<blockquote>
+<p>组件更新完毕后，react只会在第一次初始化成功会进入componentDidmount,之后每次重新渲染后都会进入这个生命周期，这里可以拿到prevProps和prevState，即更新前的props和state。</p>
+</blockquote>
+<ul>
+<li>render()</li>
+</ul>
+<blockquote>
+<p>render函数会插入jsx生成的dom结构，react会生成一份虚拟dom树，在每一次组件更新时，在此react会通过其diff算法比较更新前后的新旧DOM树，比较以后，找到最小的有差异的DOM节点，并重新渲染。</p>
+</blockquote>
+<ul>
+<li>getDerivedStateFromProps(nextProps, prevState)</li>
+</ul>
+<blockquote>
+<p>代替componentWillReceiveProps()。
+老版本中的componentWillReceiveProps()方法判断前后两个 props 是否相同，如果不同再将新的 props 更新到相应的 state 上去。这样做一来会破坏 state 数据的单一数据源，导致组件状态变得不可预测，另一方面也会增加组件的重绘次数。</p>
+</blockquote>
+<ul>
+<li>getSnapshotBeforeUpdate(prevProps, prevState)</li>
+</ul>
+<blockquote>
+<p>代替componentWillUpdate。
+常见的 componentWillUpdate 的用例是在组件更新前，读取当前某个 DOM 元素的状态，并在 componentDidUpdate 中进行相应的处理。</p>
+</blockquote>
 <blockquote>
 <p><strong>初始化阶段</strong>:  由ReactDOM.render() 触发&mdash;&ndash;初次渲染</p>
 </blockquote>
