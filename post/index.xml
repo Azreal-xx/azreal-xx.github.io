@@ -6,7 +6,16 @@
     <description>Recent content in Posts on MaGent Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Dec 2021 20:20:28 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 17:20:46 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue-router传参</title>
+      <link>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</link>
+      <pubDate>Sun, 02 Jan 2022 17:20:46 +0800</pubDate>
+      
+      <guid>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</guid>
+      <description>vue-router传递参数的三种方式 Get方式 传递页面 &amp;lt;router-link :to=&amp;#34;{path:&amp;#39;/test&amp;#39;,query: { userId: 123,userName:&amp;#39;xia&amp;#39; }}&amp;#34;&amp;gt;&amp;lt;/router-link&amp;gt; &amp;lt;router-link :to=&amp;#34;{name:&amp;#39;test&amp;#39;,query: { userId: 123,userName:&amp;#39;xia&amp;#39; }}&amp;#34;&amp;gt;&amp;lt;/router-link&amp;gt; 接收页面 this.$route.query.userId // 123 this.$route.query.userName // xia url: http://localhost:8080/test?userId=123&amp;amp;userName=xia 这种方式传递参数，页面刷新后值不会消</description>
+    </item>
+    
     <item>
       <title>Vue中使用Mixins</title>
       <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</link>

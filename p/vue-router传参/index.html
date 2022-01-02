@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='回流和重绘 简介 在HTML中，每个元素都可以理解成一个盒子，在浏览器解析过程中，会涉及到回流与重绘。 回流: 布局引擎会根据各种样式计算每个盒子在'><title>回流和重绘</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='vue-router传递参数的三种方式'><title>vue-router传参</title>
 
-<link rel='canonical' href='https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/'>
+<link rel='canonical' href='https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='回流和重绘'>
-<meta property='og:description' content='回流和重绘 简介 在HTML中，每个元素都可以理解成一个盒子，在浏览器解析过程中，会涉及到回流与重绘。 回流: 布局引擎会根据各种样式计算每个盒子在'>
-<meta property='og:url' content='https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='vue-router传参'>
+<meta property='og:description' content='vue-router传递参数的三种方式'>
+<meta property='og:url' content='https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/'>
 <meta property='og:site_name' content='MaGent Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='前端' /><meta property='article:published_time' content='2021-12-14T10:28:11&#43;08:00'/><meta property='article:modified_time' content='2021-12-14T10:28:11&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/sixteen/1.png' />
-<meta name="twitter:title" content="回流和重绘">
-<meta name="twitter:description" content="回流和重绘 简介 在HTML中，每个元素都可以理解成一个盒子，在浏览器解析过程中，会涉及到回流与重绘。 回流: 布局引擎会根据各种样式计算每个盒子在"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://loopyasa.github.io/post/sixteen/1.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:published_time' content='2022-01-02T17:20:46&#43;08:00'/><meta property='article:modified_time' content='2022-01-02T17:20:46&#43;08:00'/><meta property='og:image' content='https://loopyasa.github.io/post/eighteen/1.png' />
+<meta name="twitter:title" content="vue-router传参">
+<meta name="twitter:description" content="vue-router传递参数的三种方式"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://loopyasa.github.io/post/eighteen/1.png' />
     <link rel="shortcut icon" href="https://pic.imgdb.cn/item/61adcfd12ab3f51d91ce3eed.png" />
 
     </head>
@@ -64,9 +64,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/">
+            <a href="/p/vue-router%E4%BC%A0%E5%8F%82/">
                 
-                    <img src="/post/sixteen/1.png" loading="lazy" alt="Featured image of post 回流和重绘" />
+                    <img src="/post/eighteen/1.png" loading="lazy" alt="Featured image of post vue-router传参" />
                 
             </a>
         </div>
@@ -84,9 +84,13 @@
     
 
     <h2 class="article-title">
-        <a href="/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/">回流和重绘</a>
+        <a href="/p/vue-router%E4%BC%A0%E5%8F%82/">vue-router传参</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        vue-router传递参数的三种方式
+    </h3>
     
 
     
@@ -102,7 +106,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 14, 2021</time>
+                <time class="article-time--published">Jan 02, 2022</time>
             </div>
         
 
@@ -117,7 +121,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 4 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -127,78 +131,98 @@
 </header>
 
     <section class="article-content">
-    <h1 id="回流和重绘">回流和重绘</h1>
-<h2 id="简介">简介</h2>
-<p>在<code>HTML</code>中，每个元素都可以理解成一个盒子，在浏览器解析过程中，会涉及到回流与重绘。</p>
+    <h1 id="vue-router传递参数的三种方式">vue-router传递参数的三种方式</h1>
+<h2 id="get方式">Get方式</h2>
 <ul>
-<li>回流: 布局引擎会根据各种样式计算每个盒子在页面上的大小与位置</li>
-<li>重绘: 当计算好盒模型的位置、大小及其他属性后，浏览器根据每个盒子特性进行绘制</li>
-</ul>
-<p>浏览器解析渲染机制如下所示</p>
-<p><figure 
-	>
-	<a href="/post/sixteen/2.png" >
-		<img src="/post/sixteen/2.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
-	
-</figure></p>
-<ol>
-<li>解析HTML，生成DOM树，解析CSS，生成CSSOM树</li>
-<li>将DOM树和CSSOM树结合，生成渲染树(Render Tree)</li>
-<li>Layout(回流):根据生成的渲染树，进行回流(Layout)，得到节点的几何信息（位置，大小）</li>
-<li>Painting(重绘):根据渲染树以及回流得到的几何信息，得到节点的绝对像素</li>
-<li>Display:将像素发送给GPU，展示在页面上</li>
-</ol>
-<p>在页面初始渲染阶段，回流不可避免的触发，可以理解成页面一开始是空白的元素，后面添加了新的元素使页面布局发生改变</p>
-<p>当我们对 <code>DOM</code> 的修改引发了 <code>DOM </code>几何尺寸的变化（比如修改元素的宽、高或隐藏元素等）时，浏览器需要重新计算元素的几何属性，然后再将计算的结果绘制出来</p>
-<p>当我们对 <code>DOM </code>的修改导致了样式的变化（<code>color</code>或<code>background-color</code>），却并未影响其几何属性时，浏览器不需重新计算元素的几何属性、直接为该元素绘制新的样式，这里就仅仅触发了回流</p>
-<h2 id="如何触发">如何触发</h2>
-<h3 id="回流">回流</h3>
-<p>回流这一阶段主要是计算节点的位置和几何信息，那么当页面布局和几何信息发生变化的时候，就需要回流，如下面情况：</p>
-<ul>
-<li>添加或删除可见的DOM元素</li>
-<li>元素的位置发生变化</li>
-<li>元素的尺寸发生变化（包括外边距、内边框、边框大小、高度和宽度等）</li>
-<li>内容发生变化，比如文本变化或图片被另一个不同尺寸的图片所替代</li>
-<li>页面一开始渲染的时候（这避免不了）</li>
-<li>浏览器的窗口尺寸变化（因为回流是根据视口的大小来计算元素的位置和大小的）</li>
-</ul>
-<p>浏览器的窗口尺寸变化（因为回流是根据视口的大小来计算元素的位置和大小的）</p>
+<li>
+<p>传递页面</p>
 <blockquote>
-<p>offsetTop、offsetLeft、 offsetWidth、offsetHeight、scrollTop、scrollLeft、scrollWidth、scrollHeight、clientTop、clientLeft、clientWidth、clientHeight</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{path:&#39;/test&#39;,query: { userId: 123,userName:&#39;xia&#39; }}&#34;</span><span class="p">&gt;</span><span class="o">&lt;</span><span class="err">/router-link&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{name:&#39;test&#39;,query: { userId: 123,userName:&#39;xia&#39; }}&#34;</span><span class="p">&gt;</span><span class="o">&lt;</span><span class="err">/router-link&gt;</span>
+</code></pre></div></blockquote>
+</li>
+<li>
+<p>接收页面</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">userId</span>  <span class="c1">// 123
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">userName</span>  <span class="c1">// xia
+</span></code></pre></div></blockquote>
+</li>
+</ul>
+<p><strong>url</strong>: <code>http://localhost:8080/test?userId=123&amp;userName=xia</code></p>
+<p>这种方式传递参数，页面刷新后值不会消失</p>
+<h2 id="post">Post</h2>
+<ul>
+<li>
+<p>传递页面</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{name:&#39;test&#39;,params: { userId: 123,userName:&#39;xia&#39; }}&#34;</span><span class="p">&gt;</span><span class="o">&lt;</span><span class="err">/router-link&gt;</span>
+</code></pre></div></blockquote>
+</li>
+<li>
+<p>接收页面</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">userId</span>  <span class="c1">// 123
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">userName</span>  <span class="c1">// xia
+</span></code></pre></div></blockquote>
+</li>
+</ul>
+<p><strong>url</strong>: <code>http://localhost:8080/test</code></p>
+<p>这种方式传递参数，页面刷新后会消失</p>
+<h2 id="路由方法">路由方法</h2>
+<ul>
+<li>
+<p>router.js</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// router.js
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/test/:userId/:userName?&#39;</span><span class="p">,</span> <span class="c1">//?问号的意思是该参数不是必传项
+</span><span class="c1"></span>    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+    <span class="nx">component</span><span class="o">:</span> <span class="s1">&#39;test.vue&#39;</span><span class="p">,</span>
+    <span class="nx">props</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">},</span>
+</code></pre></div></blockquote>
+</li>
+<li>
+<p>传递页面</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">router</span><span class="o">-</span><span class="nx">link</span> <span class="nx">to</span><span class="o">=</span><span class="s2">&#34;/test/123/xia&#34;</span><span class="o">&gt;&lt;</span><span class="err">/router-link&gt;</span>
+</code></pre></div></blockquote>
+</li>
+<li>
+<p>接收页面</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">userId</span>  <span class="c1">// 123
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">userName</span>  <span class="c1">// xia
+</span></code></pre></div></blockquote>
+</li>
+</ul>
+<p><strong>url</strong>: <code>http://localhost:8080/test/123/xia</code></p>
+<p>这种方式传递参数，页面刷新后不会消失</p>
+<h2 id="router和route">$router和$route</h2>
+<ul>
+<li>
+<p><strong>$router</strong>: 指整个路由实例，可以操控整个路由，基本用法:</p>
+<blockquote>
+<ol>
+<li>this.$router.go(-1);  <em>// 向前或者向后跳转n个页面，n可为正整数或负整数</em></li>
+<li>this.$router.push('/'); <em>// 跳转到指定url路径，history栈中会有记录，点击返回会跳转到上个页面</em></li>
+<li>this.$router.replace('/'); <em>// 跳转到指定url路径，但是history栈中不会有记录，点击返回会跳转到上上个页面</em></li>
+</ol>
 </blockquote>
-<p>这些属性有一个共性，就是需要通过即时计算得到。因此浏览器为了获取这些值，也会进行回流</p>
-<p>除此还包括<code>getComputedStyle </code>方法，原理是一样的</p>
-<h3 id="重绘">重绘</h3>
-<p>触发回流一定会触发重绘</p>
-<p>可以把页面理解为一个黑板，黑板上有一朵画好的小花。现在我们要把这朵从左边移到了右边，那我们要先确定好右边的具体位置，画好形状（回流），再画上它原有的颜色（重绘）</p>
-<p>除此之外还有一些其他引起重绘行为：</p>
-<ul>
-<li>颜色的修改</li>
-<li>文本方向的修改</li>
-<li>阴影的修改</li>
+</li>
+<li>
+<p><strong>$route</strong>: 指当前路由实例$router跳转到的路由对象，父子关系，基本用法:</p>
+<blockquote>
+<ol>
+<li>this.$route.params.userId</li>
+<li>this.$route.query.userName</li>
+</ol>
+</blockquote>
+</li>
 </ul>
-<h2 id="浏览器优化机制">浏览器优化机制</h2>
-<p>由于每次重排都会造成额外的计算消耗，因此大多数浏览器都会通过队列化修改并批量执行来优化重排过程。浏览器会将修改操作放入到队列里，直到过了一段时间或者操作达到了一个阈值，才清空队列</p>
-<p>由于每次重排都会造成额外的计算消耗，因此大多数浏览器都会通过队列化修改并批量执行来优化重排过程。浏览器会将修改操作放入到队列里，直到过了一段时间或者操作达到了一个阈值，才清空队列</p>
-<p>因此浏览器不得不清空队列，触发回流重绘来返回正确的值</p>
-<h2 id="如何减少">如何减少</h2>
-<ul>
-<li>如果想设定元素的样式，通过改变元素的 <code>class</code> 类名 (尽可能在 DOM 树的最里层)</li>
-<li>避免设置多项内联样式</li>
-<li>应用元素的动画，使用 <code>position</code> 属性的 <code>fixed</code> 值或 <code>absolute</code> 值(如前文示例所提)</li>
-<li>避免使用 <code>table</code> 布局，<code>table</code> 中每个元素的大小以及内容的改动，都会导致整个 <code>table</code> 的重新计算</li>
-<li>对于那些复杂的动画，对其设置 <code>position: fixed/absolute</code>，尽可能地使元素脱离文档流，从而减少对其他元素的影响</li>
-<li>使用css3硬件加速，可以让<code>transform</code>、<code>opacity</code>、<code>filters</code>这些动画不会引起回流重绘</li>
-<li>避免使用 CSS 的 <code>JavaScript</code> 表达式</li>
-</ul>
-<p><a class="link" href="https://github.com/febobo/web-interview/issues/107"  target="_blank" rel="noopener"
-    >参考文献</a></p>
 
 </section>
 
@@ -207,7 +231,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+            <a href="/tags/vue/">Vue</a>
         
     </section>
 
@@ -239,18 +263,54 @@
                 
                     
 <article class="has-image">
-    <a href="/p/vue-router%E4%BC%A0%E5%8F%82/">
+    <a href="/p/vue%E4%B8%AD%E7%9A%84ajax/">
         
         
             <div class="article-image">
                 
-                    <img src="/post/eighteen/1.png" loading="lazy" data-key="" data-hash="/post/eighteen/1.png"/>
+                    <img src="/post/seven/1.png" loading="lazy" data-key="" data-hash="/post/seven/1.png"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">vue-router传参</h2>
+            <h2 class="article-title">Vue中的Ajax</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/four/1.png" loading="lazy" data-key="" data-hash="/post/four/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue生命周期执行流程</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/sixteen/1.png" loading="lazy" data-key="" data-hash="/post/sixteen/1.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">回流和重绘</h2>
         </div>
     </a>
 </article>
@@ -287,42 +347,6 @@
 
         <div class="article-details">
             <h2 class="article-title">var 、 let 、 const</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/js%E4%B8%AD%E7%9A%84this/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/nine/1.png" loading="lazy" data-key="" data-hash="/post/nine/1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">JS中的this</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="has-image">
-    <a href="/p/cookie-localstorage-sessionstorage/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/eight/1.png" loading="lazy" data-key="" data-hash="/post/eight/1.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Cookie  localStorage  sessionStorage</h2>
         </div>
     </a>
 </article>
@@ -464,15 +488,10 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#简介">简介</a></li>
-    <li><a href="#如何触发">如何触发</a>
-      <ol>
-        <li><a href="#回流">回流</a></li>
-        <li><a href="#重绘">重绘</a></li>
-      </ol>
-    </li>
-    <li><a href="#浏览器优化机制">浏览器优化机制</a></li>
-    <li><a href="#如何减少">如何减少</a></li>
+    <li><a href="#get方式">Get方式</a></li>
+    <li><a href="#post">Post</a></li>
+    <li><a href="#路由方法">路由方法</a></li>
+    <li><a href="#router和route">$router和$route</a></li>
   </ol>
 </nav>
                 </div>
