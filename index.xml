@@ -6,7 +6,262 @@
         <description>Recent content on MaGent Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 02 Jan 2022 17:20:46 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 04 Jan 2022 16:33:06 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>请求状态码</title>
+        <link>https://loopyasa.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</link>
+        <pubDate>Tue, 04 Jan 2022 16:33:06 +0800</pubDate>
+        
+        <guid>https://loopyasa.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</guid>
+        <description>&lt;img src="https://loopyasa.github.io/post/twenty/1.png" alt="Featured image of post 请求状态码" /&gt;&lt;h1 id=&#34;常见请求状态码&#34;&gt;常见请求状态码&lt;/h1&gt;
+&lt;h2 id=&#34;请求状态码&#34;&gt;请求状态码&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;HTTP状态码&lt;/strong&gt;表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常或者是出现的错误，能够根据返回的&lt;strong&gt;状态码&lt;/strong&gt;判断请求是否得到正确的处理很重要。&lt;/p&gt;
+&lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;类别&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;原因短语&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1xx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Informational（信息性状态码）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;接受的请求正在处理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2xx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Success（成功状态码）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;请求正常处理完毕&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3xx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Redirection（重定向）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;需要进行附加操作以完成请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4xx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Client error（客户端错误）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;客户端请求出错，服务器无法处理请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5xx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Server Error（服务器错误）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;服务器处理请求出错&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2xx&#34;&gt;2xx&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;200 OK&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示从客户端发送给服务器的请求被正常处理并返回&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;204 No Content&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示客户端发送给客户端的请求得到了成功处理，但在返回的响应报文中不含实体的主体部分（没有资源可以返回）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;206 Patial Content&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示客户端进行了范围请求，并且服务器成功执行了这部分的GET请求，响应报文中包含由Content-Range指定范围的实体内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3xx&#34;&gt;3xx&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;301 Moved Permanently&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;永久性重定向，表示请求的资源被分配了新的URL，之后应使用更改的URL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;302 Found&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;临时性重定向，表示请求的资源被分配了新的URL，希望本次访问使用新的URL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;301与302的区别：前者是永久移动，后者是临时移动（之后可能还会更改URL）&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;303 See Other&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示请求的资源被分配了新的URL，应使用GET方法定向获取请求的资源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;302与303的区别：后者明确表示客户端应当采用GET方式获取资源&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;304 Not Modified&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示客户端发送附带条件（是指采用GET方法的请求报文中包含if-Match、If-Modified-Since、If-None-Match、If-Range、If-Unmodified-Since中任一首部）的请求时，服务器端允许访问资源，但是请求为满足条件的情况下返回改状态码；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;307 Temporary Redirect&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;临时重定向，与303有着相同的含义，307会遵照浏览器标准不会从POST变成GET；（不同浏览器可能会出现不同的情况）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4xx&#34;&gt;4xx&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;400 Bad Request&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示请求报文中存在语法错误&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;401 Unauthorized&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;未经许可，需要通过HTTP认证&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;403 Forbidden&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;服务器拒绝该次访问（访问权限出现问题）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;404 Not Found&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示服务器上无法找到请求的资源，除此之外，也可以在服务器拒绝请求但不想给拒绝原因时使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5xx&#34;&gt;5xx&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;500 Inter Server Error&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示服务器在执行请求时发生了错误，也有可能是web应用存在的bug或某些临时的错误时&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;503 Server Unavailable&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表示服务器暂时处于超负载或正在进行停机维护，无法处理请求&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>浏览器缓存机制</title>
+        <link>https://loopyasa.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</link>
+        <pubDate>Tue, 04 Jan 2022 16:03:08 +0800</pubDate>
+        
+        <guid>https://loopyasa.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</guid>
+        <description>&lt;img src="https://loopyasa.github.io/post/nineteen/1.png" alt="Featured image of post 浏览器缓存机制" /&gt;&lt;h1 id=&#34;浏览器缓存机制&#34;&gt;浏览器缓存机制&lt;/h1&gt;
+&lt;h2 id=&#34;强缓存&#34;&gt;强缓存&lt;/h2&gt;
+&lt;p&gt;浏览器在加载资源时，会先根据本地缓存资源的 header 中的信息判断是否命中强缓存，如果命中则直接使用缓存中的资源不会再向服务器发送请求。&lt;/p&gt;
+&lt;p&gt;这里的 header 中的信息指的是 expires 和 cahe-control。&lt;/p&gt;
+&lt;h3 id=&#34;expires&#34;&gt;Expires&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该字段是 &lt;strong&gt;http1.0&lt;/strong&gt; 时的规范，它的值为一个&lt;strong&gt;绝对时间&lt;/strong&gt;的 GMT 格式的时间字符串，比如 Expires:Mon,18 Oct 2066 23:59:59 GMT。这个时间代表着这个资源的失效时间，在此时间之前，即命中缓存。这种方式有一个明显的缺点，由于失效时间是一个绝对时间，所以当服务器与客户端时间偏差较大时，就会导致缓存混乱。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;cache-control&#34;&gt;Cache-Control&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cache-Control 是 &lt;strong&gt;http1.1&lt;/strong&gt; 时出现的 header 信息，主要是利用该字段的 &lt;strong&gt;max-age&lt;/strong&gt; 值来进行判断，它是一个&lt;strong&gt;相对时间&lt;/strong&gt;，例如 Cache-Control:max-age=3600，代表着资源的有效期是 3600 秒。cache-control 除了该字段外，还有下面几个比较常用的设置值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;no-cache&lt;/strong&gt;：需要进行协商缓存，发送请求到服务器确认是否使用缓存。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;no-store&lt;/strong&gt;：禁止使用缓存，每一次都要重新请求数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;public&lt;/strong&gt;：可以被所有的用户缓存，包括终端用户和 CDN 等中间代理服务器。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;private&lt;/strong&gt;：只能被终端用户的浏览器缓存，不允许 CDN 等中继缓存服务器对其缓存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Cache-Control 与 Expires 可以在服务端配置同时启用，同时启用的时候 Cache-Control 优先级高。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;协商缓存&#34;&gt;协商缓存&lt;/h2&gt;
+&lt;p&gt;当强缓存没有命中的时候，浏览器会发送一个请求到服务器，服务器根据 header 中的部分信息来判断是否命中缓存。如果命中，则返回 304 ，告诉浏览器资源未更新，可使用本地的缓存。&lt;/p&gt;
+&lt;p&gt;这里的 header 中的信息指的是 Last-Modify/If-Modify-Since 和 ETag/If-None-Match.&lt;/p&gt;
+&lt;h3 id=&#34;last-modifyif-modify-since&#34;&gt;Last-Modify/If-Modify-Since&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;浏览器第一次请求一个资源的时候，服务器返回的 header 中会加上 Last-Modify，Last-modify 是一个时间标识该资源的最后修改时间。&lt;/p&gt;
+&lt;p&gt;当浏览器再次请求该资源时，request 的请求头中会包含 If-Modify-Since，该值为缓存之前返回的 Last-Modify。服务器收到 If-Modify-Since 后，根据资源的最后修改时间判断是否命中缓存。&lt;/p&gt;
+&lt;p&gt;如果命中缓存，则返回 304，并且不会返回资源内容，并且不会返回 Last-Modify。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;缺点:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;短时间内资源发生了改变，Last-Modified 并不会发生变化。&lt;/li&gt;
+&lt;li&gt;周期性变化。如果这个资源在一个周期内修改回原来的样子了，我们认为是可以使用缓存的，但是 Last-Modified 可不这样认为,因此便有了 ETag。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;etagif-none-match&#34;&gt;ETag/If-None-Match&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;与 Last-Modify/If-Modify-Since 不同的是，Etag/If-None-Match 返回的是一个校验码。ETag 可以保证每一个资源是唯一的，资源变化都会导致 ETag 变化。服务器根据浏览器上送的 If-None-Match 值来判断是否命中缓存。&lt;/p&gt;
+&lt;p&gt;与 Last-Modified 不一样的是，当服务器返回 304 Not Modified 的响应时，由于 ETag 重新生成过，response header 中还会把这个 ETag 返回，即使这个 ETag 跟之前的没有变化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Last-Modified 与 ETag 是可以一起使用的，服务器会优先验证 ETag，一致的情况下，才会继续比对 Last-Modified，最后才决定是否返回 304。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;当浏览器再次访问一个已经访问过的资源时，它会这样做：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;看看是否命中强缓存，如果命中，就直接使用缓存了。&lt;/li&gt;
+&lt;li&gt;如果没有命中强缓存，就发请求到服务器检查是否命中协商缓存。&lt;/li&gt;
+&lt;li&gt;如果命中协商缓存，服务器会返回 304 告诉浏览器使用本地缓存。&lt;/li&gt;
+&lt;li&gt;否则，返回最新的资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;浏览器缓存资源存储&#34;&gt;浏览器缓存资源存储&lt;/h1&gt;
+&lt;h2 id=&#34;memory-cache&#34;&gt;memory cache&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MemoryCache顾名思义，就是将资源缓存到内存中，等待下次访问时不需要重新下载资源，而直接从内存中获取。Webkit早已支持memoryCache。
+目前Webkit资源分成两类，一类是主资源，比如HTML页面，或者下载项，一类是派生资源，比如HTML页面中内嵌的图片或者脚本链接，分别对应代码中两个类：MainResourceLoader和SubresourceLoader。虽然Webkit支持memoryCache，但是也只是针对派生资源，它对应的类为CachedResource，用于保存原始数据（比如CSS，JS等），以及解码过的图片数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;disk-cache&#34;&gt;disk cache&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DiskCache顾名思义，就是将资源缓存到磁盘中，等待下次访问时不需要重新下载资源，而直接从磁盘中获取，它的直接操作对象为CurlCacheManager。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;memory cache&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;disk cache&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相同点&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只能存储一些派生类资源文件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只能存储一些派生类资源文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不同点&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;退出进程时数据会被清除&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;退出进程时数据不会被清除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;存储资源&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般脚本、字体、图片会存在内存当中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般非脚本会存在内存当中，如css等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;因为CSS文件加载一次就可渲染出来,我们不会频繁读取它,所以它不适合缓存到内存中,但是js之类的脚本却随时可能会执行,如果脚本在磁盘当中,我们在执行脚本的时候需要从磁盘取到内存中来,这样IO开销就很大了,有可能导致浏览器失去响应。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三级缓存理论-访问缓存优先级-&#34;&gt;三级缓存理论( 访问缓存优先级 )&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;先在内存中查找,如果有,直接加载。&lt;/li&gt;
+&lt;li&gt;如果内存中不存在,则在硬盘中查找,如果有直接加载。&lt;/li&gt;
+&lt;li&gt;如果硬盘中也没有,那么就进行网络请求。&lt;/li&gt;
+&lt;li&gt;请求获取的资源缓存到硬盘和内存。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://segmentfault.com/a/1190000017962411&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考文章&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>vue-router传参</title>
         <link>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</link>
         <pubDate>Sun, 02 Jan 2022 17:20:46 +0800</pubDate>
@@ -33,7 +288,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;url&lt;/strong&gt;: &lt;code&gt;http://localhost:8080/test?userId=123&amp;amp;userName=xia&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;这种方式传递参数，页面刷新后值不会消失&lt;/p&gt;
-&lt;h2 id=&#34;post&#34;&gt;Post&lt;/h2&gt;
+&lt;h2 id=&#34;post方式&#34;&gt;Post方式&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;传递页面&lt;/p&gt;
