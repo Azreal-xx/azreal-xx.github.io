@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vue on MaGent Blog</title>
-    <link>https://loopyasa.github.io/tags/vue/</link>
-    <description>Recent content in Vue on MaGent Blog</description>
+    <title>Vue on Huangyl Blog</title>
+    <link>https://azreal-xx.github.io/tags/vue/</link>
+    <description>Recent content in Vue on Huangyl Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jan 2022 17:20:46 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 17:20:46 +0800</lastBuildDate><atom:link href="https://azreal-xx.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vue-router传参</title>
-      <link>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</link>
+      <link>https://azreal-xx.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</link>
       <pubDate>Sun, 02 Jan 2022 17:20:46 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</guid>
+      <guid>https://azreal-xx.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</guid>
       <description>vue-router传递参数的三种方式 Get方式 传递页面 &amp;lt;router-link :to=&amp;#34;{path:&amp;#39;/test&amp;#39;,query: { userId: 123,userName:&amp;#39;xia&amp;#39; }}&amp;#34;&amp;gt;&amp;lt;/router-link&amp;gt; &amp;lt;router-link :to=&amp;#34;{name:&amp;#39;test&amp;#39;,query: { userId: 123,userName:&amp;#39;xia&amp;#39; }}&amp;#34;&amp;gt;&amp;lt;/router-link&amp;gt; 接收页面 this.$route.query.userId // 123 this.$route.query.userName // xia url: http://localhost:8080/test?userId=123&amp;amp;userName=xia 这种方式传递参数，页面刷新后值不会消</description>
     </item>
     
     <item>
       <title>Vue中使用Mixins</title>
-      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</link>
+      <link>https://azreal-xx.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</link>
       <pubDate>Fri, 31 Dec 2021 20:20:28 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</guid>
       <description>Vue中使用Mixins 基础概念 混入 (mixins)： 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用</description>
     </item>
     
     <item>
       <title>Vue中的i18n</title>
-      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</link>
+      <link>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</link>
       <pubDate>Sun, 12 Dec 2021 15:18:25 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</guid>
       <description>Vue中使用vue-i18n i18n i18n（其来源是英文单词 internationalization的首末字符i和n，18为中间的字符数）是“国</description>
     </item>
     
     <item>
       <title>Vue自定义指令</title>
-      <link>https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</link>
+      <link>https://azreal-xx.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</link>
       <pubDate>Sat, 11 Dec 2021 13:57:21 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
       <description>Vue自定义指令 指令 指令 (Directives)： 是带有 v- 前缀的特殊属性， 职责是，当表达式的值改变时， 将其产生的连带影响，响应式地作用于 DO</description>
     </item>
     
     <item>
       <title>Vue中的Ajax</title>
-      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
+      <link>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
       <pubDate>Thu, 09 Dec 2021 10:57:56 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</guid>
       <description>Vue中的Ajax应该在放在哪个钩子函数中 前言 网上看了许多的相关博客，问题范围较广具体很多都是要看业务需求。异步函数并不会阻塞vue生命周期</description>
     </item>
     
     <item>
       <title>Vue动态创建全局组件</title>
-      <link>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</link>
+      <link>https://azreal-xx.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</link>
       <pubDate>Wed, 08 Dec 2021 20:02:44 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</guid>
       <description>Vue动态创建全局组件 创建全局组件 这是我准备的组件目录结构 创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能 &amp;lt;template&amp;gt; &amp;lt;div</description>
     </item>
     
     <item>
       <title>Vue生命周期执行流程</title>
-      <link>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+      <link>https://azreal-xx.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Wed, 08 Dec 2021 13:10:44 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
       <description>Vue生命周期执行流程 Vue实例的生命周期 挂载: 初始化相关属性，例如: watch、method属性 beforeCreate created beforeMount mounted 更新: 元素或组件的变更操作 beforeUpdate updated 销毁</description>
     </item>
     
     <item>
       <title>Vue项目中使用Tailwind CSS</title>
-      <link>https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</link>
+      <link>https://azreal-xx.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</link>
       <pubDate>Mon, 06 Dec 2021 23:06:19 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</guid>
       <description>Vue项目中使用Tailwind CSS 使用npm安装Tailwind、PostCSS、Autoprefixer npm install -D tailwindcss postcss autoprefixer 初始化Tailwind</description>
     </item>
     

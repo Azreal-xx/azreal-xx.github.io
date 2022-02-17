@@ -2,115 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://loopyasa.github.io/categories/</loc>
+    <loc>https://azreal-xx.github.io/</loc>
+    <lastmod>2022-01-17T17:51:43+08:00</lastmod>
+  </url><url>
+    <loc>https://azreal-xx.github.io/post/</loc>
+    <lastmod>2022-01-17T17:51:43+08:00</lastmod>
+  </url><url>
+    <loc>https://azreal-xx.github.io/p/twentyone/</loc>
+    <lastmod>2022-01-17T17:51:43+08:00</lastmod>
+  </url><url>
+    <loc>https://azreal-xx.github.io/categories/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/http/</loc>
+    <loc>https://azreal-xx.github.io/tags/http/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/</loc>
+    <loc>https://azreal-xx.github.io/tags/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/post/</loc>
+    <loc>https://azreal-xx.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/</loc>
+    <loc>https://azreal-xx.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-01-04T16:33:06+08:00</lastmod>
-  </url><url>
-    <loc>https://loopyasa.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
-    <lastmod>2022-01-04T16:33:06+08:00</lastmod>
-  </url><url>
-    <loc>https://loopyasa.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+    <loc>https://azreal-xx.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
     <lastmod>2022-01-04T16:03:08+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</loc>
+    <loc>https://azreal-xx.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</loc>
     <lastmod>2022-01-04T16:03:08+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/vue/</loc>
+    <loc>https://azreal-xx.github.io/tags/vue/</loc>
     <lastmod>2022-01-02T17:20:46+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</loc>
+    <loc>https://azreal-xx.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</loc>
     <lastmod>2022-01-02T17:20:46+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</loc>
     <lastmod>2021-12-31T20:20:28+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://azreal-xx.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2021-12-31T20:20:28+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://azreal-xx.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-12-14T10:28:11+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</loc>
+    <loc>https://azreal-xx.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</loc>
     <lastmod>2021-12-14T10:28:11+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
+    <loc>https://azreal-xx.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
     <lastmod>2021-12-13T13:00:05+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>https://azreal-xx.github.io/tags/%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2021-12-13T13:00:05+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/js/</loc>
+    <loc>https://azreal-xx.github.io/tags/js/</loc>
     <lastmod>2021-12-12T19:45:26+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/var-let-const/</loc>
+    <loc>https://azreal-xx.github.io/p/var-let-const/</loc>
     <lastmod>2021-12-12T19:45:26+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/react/</loc>
+    <loc>https://azreal-xx.github.io/tags/react/</loc>
     <lastmod>2021-12-12T17:16:32+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</loc>
+    <loc>https://azreal-xx.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</loc>
     <lastmod>2021-12-12T17:16:32+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</loc>
     <lastmod>2021-12-12T15:18:25+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2021-12-11T13:57:21+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</loc>
+    <loc>https://azreal-xx.github.io/p/js%E4%B8%AD%E7%9A%84this/</loc>
     <lastmod>2021-12-10T12:30:07+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</loc>
+    <loc>https://azreal-xx.github.io/p/cookie-localstorage-sessionstorage/</loc>
     <lastmod>2021-12-09T22:41:52+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</loc>
     <lastmod>2021-12-09T10:57:56+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</loc>
     <lastmod>2021-12-08T20:02:44+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</loc>
+    <loc>https://azreal-xx.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</loc>
     <lastmod>2021-12-08T18:45:30+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://azreal-xx.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-12-08T18:45:30+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://azreal-xx.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-12-08T18:45:30+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2021-12-08T13:10:44+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</loc>
+    <loc>https://azreal-xx.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2021-12-07T16:10:25+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/tailwind-css/</loc>
+    <loc>https://azreal-xx.github.io/tags/tailwind-css/</loc>
     <lastmod>2021-12-06T23:06:19+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</loc>
+    <loc>https://azreal-xx.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</loc>
     <lastmod>2021-12-06T23:06:19+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/hugo/</loc>
+    <loc>https://azreal-xx.github.io/tags/hugo/</loc>
     <lastmod>2021-12-05T20:44:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/tags/vercel/</loc>
+    <loc>https://azreal-xx.github.io/tags/vercel/</loc>
     <lastmod>2021-12-05T20:44:06+08:00</lastmod>
   </url><url>
-    <loc>https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://azreal-xx.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2021-12-05T20:44:06+08:00</lastmod>
   </url>
 </urlset>

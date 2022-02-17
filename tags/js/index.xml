@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JS on MaGent Blog</title>
-    <link>https://loopyasa.github.io/tags/js/</link>
-    <description>Recent content in JS on MaGent Blog</description>
+    <title>JS on Huangyl Blog</title>
+    <link>https://azreal-xx.github.io/tags/js/</link>
+    <description>Recent content in JS on Huangyl Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Dec 2021 19:45:26 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 19:45:26 +0800</lastBuildDate><atom:link href="https://azreal-xx.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>var 、 let 、 const</title>
-      <link>https://loopyasa.github.io/p/var-let-const/</link>
+      <link>https://azreal-xx.github.io/p/var-let-const/</link>
       <pubDate>Sun, 12 Dec 2021 19:45:26 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/var-let-const/</guid>
+      <guid>https://azreal-xx.github.io/p/var-let-const/</guid>
       <description>var 、 let 、 const的区别 var 在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器</description>
     </item>
     
     <item>
       <title>JS中的this</title>
-      <link>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</link>
+      <link>https://azreal-xx.github.io/p/js%E4%B8%AD%E7%9A%84this/</link>
       <pubDate>Fri, 10 Dec 2021 12:30:07 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</guid>
+      <guid>https://azreal-xx.github.io/p/js%E4%B8%AD%E7%9A%84this/</guid>
       <description>JS中的this 定义 函数的 this 关键字在 JavaScript 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定</description>
     </item>
     
     <item>
       <title>Cookie  localStorage  sessionStorage</title>
-      <link>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</link>
+      <link>https://azreal-xx.github.io/p/cookie-localstorage-sessionstorage/</link>
       <pubDate>Thu, 09 Dec 2021 22:41:52 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</guid>
+      <guid>https://azreal-xx.github.io/p/cookie-localstorage-sessionstorage/</guid>
       <description>Cookie localStorage sessionStorage Cookie Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用</description>
     </item>
     

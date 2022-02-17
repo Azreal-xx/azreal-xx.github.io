@@ -1,180 +1,189 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on MaGent Blog</title>
-    <link>https://loopyasa.github.io/post/</link>
-    <description>Recent content in Posts on MaGent Blog</description>
+    <title>Posts on Huangyl Blog</title>
+    <link>https://azreal-xx.github.io/post/</link>
+    <description>Recent content in Posts on Huangyl Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 16:33:06 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jan 2022 17:51:43 +0800</lastBuildDate><atom:link href="https://azreal-xx.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Twentyone</title>
+      <link>https://azreal-xx.github.io/p/twentyone/</link>
+      <pubDate>Mon, 17 Jan 2022 17:51:43 +0800</pubDate>
+      
+      <guid>https://azreal-xx.github.io/p/twentyone/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>请求状态码</title>
-      <link>https://loopyasa.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</link>
+      <link>https://azreal-xx.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</link>
       <pubDate>Tue, 04 Jan 2022 16:33:06 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</guid>
+      <guid>https://azreal-xx.github.io/p/%E8%AF%B7%E6%B1%82%E7%8A%B6%E6%80%81%E7%A0%81/</guid>
       <description>常见请求状态码 请求状态码 HTTP状态码表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常或者是出现的错误，能够根据返回的状态码判断</description>
     </item>
     
     <item>
       <title>浏览器缓存机制</title>
-      <link>https://loopyasa.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</link>
+      <link>https://azreal-xx.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</link>
       <pubDate>Tue, 04 Jan 2022 16:03:08 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</guid>
+      <guid>https://azreal-xx.github.io/p/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</guid>
       <description>浏览器缓存机制 强缓存 浏览器在加载资源时，会先根据本地缓存资源的 header 中的信息判断是否命中强缓存，如果命中则直接使用缓存中的资源不会再向服务器发送</description>
     </item>
     
     <item>
       <title>vue-router传参</title>
-      <link>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</link>
+      <link>https://azreal-xx.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</link>
       <pubDate>Sun, 02 Jan 2022 17:20:46 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</guid>
+      <guid>https://azreal-xx.github.io/p/vue-router%E4%BC%A0%E5%8F%82/</guid>
       <description>vue-router传递参数的三种方式 Get方式 传递页面 &amp;lt;router-link :to=&amp;#34;{path:&amp;#39;/test&amp;#39;,query: { userId: 123,userName:&amp;#39;xia&amp;#39; }}&amp;#34;&amp;gt;&amp;lt;/router-link&amp;gt; &amp;lt;router-link :to=&amp;#34;{name:&amp;#39;test&amp;#39;,query: { userId: 123,userName:&amp;#39;xia&amp;#39; }}&amp;#34;&amp;gt;&amp;lt;/router-link&amp;gt; 接收页面 this.$route.query.userId // 123 this.$route.query.userName // xia url: http://localhost:8080/test?userId=123&amp;amp;userName=xia 这种方式传递参数，页面刷新后值不会消</description>
     </item>
     
     <item>
       <title>Vue中使用Mixins</title>
-      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</link>
+      <link>https://azreal-xx.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</link>
       <pubDate>Fri, 31 Dec 2021 20:20:28 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E4%B8%AD%E4%BD%BF%E7%94%A8mixins/</guid>
       <description>Vue中使用Mixins 基础概念 混入 (mixins)： 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用</description>
     </item>
     
     <item>
       <title>回流和重绘</title>
-      <link>https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</link>
+      <link>https://azreal-xx.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</link>
       <pubDate>Tue, 14 Dec 2021 10:28:11 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</guid>
+      <guid>https://azreal-xx.github.io/p/%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98/</guid>
       <description>回流和重绘 简介 在HTML中，每个元素都可以理解成一个盒子，在浏览器解析过程中，会涉及到回流与重绘。 回流: 布局引擎会根据各种样式计算每个盒子在</description>
     </item>
     
     <item>
       <title>TCP三次握手和四次挥手</title>
-      <link>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</link>
+      <link>https://azreal-xx.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</link>
       <pubDate>Mon, 13 Dec 2021 13:00:05 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</guid>
+      <guid>https://azreal-xx.github.io/p/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</guid>
       <description>TCP三次握手和四次挥手 TCP连接 建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。在socket编程中，这一过程由客</description>
     </item>
     
     <item>
       <title>var 、 let 、 const</title>
-      <link>https://loopyasa.github.io/p/var-let-const/</link>
+      <link>https://azreal-xx.github.io/p/var-let-const/</link>
       <pubDate>Sun, 12 Dec 2021 19:45:26 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/var-let-const/</guid>
+      <guid>https://azreal-xx.github.io/p/var-let-const/</guid>
       <description>var 、 let 、 const的区别 var 在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器</description>
     </item>
     
     <item>
       <title>React中的i18n</title>
-      <link>https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</link>
+      <link>https://azreal-xx.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</link>
       <pubDate>Sun, 12 Dec 2021 17:16:32 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</guid>
+      <guid>https://azreal-xx.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</guid>
       <description>React中使用react-i18next i18n i18n（其来源是英文单词 internationalization的首末字符i和n，18为中间的</description>
     </item>
     
     <item>
       <title>Vue中的i18n</title>
-      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</link>
+      <link>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</link>
       <pubDate>Sun, 12 Dec 2021 15:18:25 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84i18n/</guid>
       <description>Vue中使用vue-i18n i18n i18n（其来源是英文单词 internationalization的首末字符i和n，18为中间的字符数）是“国</description>
     </item>
     
     <item>
       <title>Vue自定义指令</title>
-      <link>https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</link>
+      <link>https://azreal-xx.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</link>
       <pubDate>Sat, 11 Dec 2021 13:57:21 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</guid>
       <description>Vue自定义指令 指令 指令 (Directives)： 是带有 v- 前缀的特殊属性， 职责是，当表达式的值改变时， 将其产生的连带影响，响应式地作用于 DO</description>
     </item>
     
     <item>
       <title>JS中的this</title>
-      <link>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</link>
+      <link>https://azreal-xx.github.io/p/js%E4%B8%AD%E7%9A%84this/</link>
       <pubDate>Fri, 10 Dec 2021 12:30:07 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/js%E4%B8%AD%E7%9A%84this/</guid>
+      <guid>https://azreal-xx.github.io/p/js%E4%B8%AD%E7%9A%84this/</guid>
       <description>JS中的this 定义 函数的 this 关键字在 JavaScript 中的表现略有不同，此外，在严格模式和非严格模式之间也会有一些差别。在绝大多数情况下，函数的调用方式决定</description>
     </item>
     
     <item>
       <title>Cookie  localStorage  sessionStorage</title>
-      <link>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</link>
+      <link>https://azreal-xx.github.io/p/cookie-localstorage-sessionstorage/</link>
       <pubDate>Thu, 09 Dec 2021 22:41:52 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/cookie-localstorage-sessionstorage/</guid>
+      <guid>https://azreal-xx.github.io/p/cookie-localstorage-sessionstorage/</guid>
       <description>Cookie localStorage sessionStorage Cookie Cookie 是一些数据, 存储于你电脑上的文本文件中。当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。Cookie 的作用</description>
     </item>
     
     <item>
       <title>Vue中的Ajax</title>
-      <link>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
+      <link>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</link>
       <pubDate>Thu, 09 Dec 2021 10:57:56 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E4%B8%AD%E7%9A%84ajax/</guid>
       <description>Vue中的Ajax应该在放在哪个钩子函数中 前言 网上看了许多的相关博客，问题范围较广具体很多都是要看业务需求。异步函数并不会阻塞vue生命周期</description>
     </item>
     
     <item>
       <title>Vue动态创建全局组件</title>
-      <link>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</link>
+      <link>https://azreal-xx.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</link>
       <pubDate>Wed, 08 Dec 2021 20:02:44 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6/</guid>
       <description>Vue动态创建全局组件 创建全局组件 这是我准备的组件目录结构 创建功能组件HelloWorld.vue，组件功能很简单，就是类似弹出框的功能 &amp;lt;template&amp;gt; &amp;lt;div</description>
     </item>
     
     <item>
       <title>取色器</title>
-      <link>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</link>
+      <link>https://azreal-xx.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</link>
       <pubDate>Wed, 08 Dec 2021 18:45:30 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</guid>
+      <guid>https://azreal-xx.github.io/p/%E5%8F%96%E8%89%B2%E5%99%A8/</guid>
       <description>Fork一个取色器 URL:Flat UI Colors 2 - 14 Color Palettes, 280 colors 🎨 在UI编写的时候经常会用到取色，尤其是自己这种没有审美观的人选色的时候更是拿不定手，这个网址里的颜色</description>
     </item>
     
     <item>
       <title>Vue生命周期执行流程</title>
-      <link>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+      <link>https://azreal-xx.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Wed, 08 Dec 2021 13:10:44 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
       <description>Vue生命周期执行流程 Vue实例的生命周期 挂载: 初始化相关属性，例如: watch、method属性 beforeCreate created beforeMount mounted 更新: 元素或组件的变更操作 beforeUpdate updated 销毁</description>
     </item>
     
     <item>
       <title>React生命周期执行流程</title>
-      <link>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+      <link>https://azreal-xx.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Tue, 07 Dec 2021 16:10:25 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://azreal-xx.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
       <description>React生命周期执行流程 旧版本生命周期 constructor() constructor()中完成了React数据的初始化，它接受两个参数：props和contex</description>
     </item>
     
     <item>
       <title>Vue项目中使用Tailwind CSS</title>
-      <link>https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</link>
+      <link>https://azreal-xx.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</link>
       <pubDate>Mon, 06 Dec 2021 23:06:19 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</guid>
+      <guid>https://azreal-xx.github.io/p/vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8tailwind-css/</guid>
       <description>Vue项目中使用Tailwind CSS 使用npm安装Tailwind、PostCSS、Autoprefixer npm install -D tailwindcss postcss autoprefixer 初始化Tailwind</description>
     </item>
     
     <item>
       <title>搭建个人博客</title>
-      <link>https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://azreal-xx.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sun, 05 Dec 2021 20:44:06 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://azreal-xx.github.io/p/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>Hugo+Vercel搭建个人博客 前言 个人在搭建了博客后放在了github上，因为比较慢懒，很长一段时间都闲置了，最近了解了Vercel并且</description>
     </item>
     

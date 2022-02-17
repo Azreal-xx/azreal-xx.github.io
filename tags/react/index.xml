@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on MaGent Blog</title>
-    <link>https://loopyasa.github.io/tags/react/</link>
-    <description>Recent content in React on MaGent Blog</description>
+    <title>React on Huangyl Blog</title>
+    <link>https://azreal-xx.github.io/tags/react/</link>
+    <description>Recent content in React on Huangyl Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Dec 2021 17:16:32 +0800</lastBuildDate><atom:link href="https://loopyasa.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 17:16:32 +0800</lastBuildDate><atom:link href="https://azreal-xx.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React中的i18n</title>
-      <link>https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</link>
+      <link>https://azreal-xx.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</link>
       <pubDate>Sun, 12 Dec 2021 17:16:32 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</guid>
+      <guid>https://azreal-xx.github.io/p/react%E4%B8%AD%E7%9A%84i18n/</guid>
       <description>React中使用react-i18next i18n i18n（其来源是英文单词 internationalization的首末字符i和n，18为中间的</description>
     </item>
     
     <item>
       <title>React生命周期执行流程</title>
-      <link>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
+      <link>https://azreal-xx.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Tue, 07 Dec 2021 16:10:25 +0800</pubDate>
       
-      <guid>https://loopyasa.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://azreal-xx.github.io/p/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid>
       <description>React生命周期执行流程 旧版本生命周期 constructor() constructor()中完成了React数据的初始化，它接受两个参数：props和contex</description>
     </item>
     
