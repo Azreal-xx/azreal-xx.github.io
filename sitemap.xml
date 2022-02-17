@@ -2,19 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://azreal-xx.github.io/</loc>
-    <lastmod>2022-01-17T17:51:43+08:00</lastmod>
-  </url><url>
-    <loc>https://azreal-xx.github.io/post/</loc>
-    <lastmod>2022-01-17T17:51:43+08:00</lastmod>
-  </url><url>
-    <loc>https://azreal-xx.github.io/p/twentyone/</loc>
-    <lastmod>2022-01-17T17:51:43+08:00</lastmod>
-  </url><url>
     <loc>https://azreal-xx.github.io/categories/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
     <loc>https://azreal-xx.github.io/tags/http/</loc>
+    <lastmod>2022-01-04T16:33:06+08:00</lastmod>
+  </url><url>
+    <loc>https://azreal-xx.github.io/</loc>
+    <lastmod>2022-01-04T16:33:06+08:00</lastmod>
+  </url><url>
+    <loc>https://azreal-xx.github.io/post/</loc>
     <lastmod>2022-01-04T16:33:06+08:00</lastmod>
   </url><url>
     <loc>https://azreal-xx.github.io/tags/</loc>
